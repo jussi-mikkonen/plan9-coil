@@ -1,0 +1,13 @@
+# clicks and drags account for the gutter; a click in the gutter is text column 0
+size 6 20
+file m.c "abcdef\nghijkl\n"
+open m.c
+gutter 1
+click 0 0
+dump sel
+click 1 5
+dump sel
+click 0 1
+dump sel
+drag 1 0
+dump sel

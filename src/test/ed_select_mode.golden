@@ -1,0 +1,18 @@
+open 0
+mode SEL
+sel SEL [0,1)*
+sel SEL [0,4)*
+sel SEL [0,8)*
+sel SEL [0,11)*
+sel SEL [0,12)*
+sel SEL [0,21)*
+sel NOR [0,21)*
+mode NOR
+sel NOR [0,1)*
+sel SEL [0,3)*
+sel SEL [0,2)*
+sel SEL [2,0)*
+sel SEL [2,1)*
+sel SEL [2,3)*
+sel NOR [2,3)*
+sel NOR [2,3)*

@@ -1,0 +1,8 @@
+# empty matches: skipped at the previous match end, counted at the range end
+text "baab"
+find "a*"
+text "a\n\nb"
+find "^$"
+text ""
+find "a*"
+find "^$"

@@ -1,0 +1,14 @@
+file a.c "int x;\n"
+open a.c
+keys "iab<left>X<esc>"
+dump text
+dump sel
+keys "u"
+dump text
+dump sel
+keys "u"
+dump text
+dump sel
+keys "UU"
+dump text
+dump sel

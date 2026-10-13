@@ -1,0 +1,12 @@
+status NOR [no name] [+] 1:6
+msg "old.txt exists; :w! old.txt overwrites"
+status NOR [no name] [+] 1:6  old.txt exists; :w! old.txt overwrites
+host old.txt "old\n"
+msg "old.txt: write: disk full"
+status NOR [no name] [+] 1:6  old.txt: write: disk full
+host old.txt "old\n"
+msg "wrote new.txt 5"
+status NOR new.txt 1:6  wrote new.txt 5
+host new.txt "hello"
+msg "wrote new.txt 6"
+host new.txt "hellox"

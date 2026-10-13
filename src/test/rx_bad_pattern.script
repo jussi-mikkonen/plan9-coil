@@ -1,0 +1,12 @@
+# a bad pattern is an error, never an exit; a good one still compiles afterwards
+comp "a("
+comp "x"
+comp "*a"
+comp "x"
+comp "a{2}"
+comp "\\d"
+comp "[z-a]"
+comp "x"
+comp "[ab"
+comp "a)"
+comp "x"

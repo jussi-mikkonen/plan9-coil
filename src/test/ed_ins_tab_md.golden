@@ -1,0 +1,5 @@
+open 0
+text "ab  \n"
+sel INS [4,4)*
+text "ab      \n"
+sel INS [8,8)*

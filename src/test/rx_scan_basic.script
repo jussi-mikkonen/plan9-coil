@@ -1,0 +1,6 @@
+# all non-overlapping matches
+text "xabyab\nab"
+find "ab"
+find "ab" 2 9
+find "b$"
+find "zz"

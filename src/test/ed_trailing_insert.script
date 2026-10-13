@@ -1,0 +1,12 @@
+# insert mode: whitespace before the caret is exempt, at or after it is flagged; Esc flags it all
+size 6 20
+file i.txt "ab\nx    y\nq\n"
+open i.txt
+keys "i<end>  "
+dump screen
+keys "<esc>"
+dump screen
+file j.txt "p       \n"
+open j.txt
+keys "i<right><right><right><right><right>"
+dump screen

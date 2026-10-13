@@ -1,0 +1,11 @@
+file a.txt "ab\r\ncd\r\n"
+open a.txt
+keys "ji<left>X<esc>"
+dump text
+dump sel
+open a.txt
+keys "ji<left><right>X<esc>"
+dump text
+open a.txt
+keys "A<right>X<esc>"
+dump text

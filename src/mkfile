@@ -1,0 +1,20 @@
+</$objtype/mkfile
+
+BIN=$home/bin/$objtype
+TARG=coil
+OFILES=main.$O host9.$O draw9.$O utf.$O buf.$O doc.$O sel.$O lang.$O view.$O render.$O keymap.$O ed.$O motion.$O obj.$O verbs.$O prompt.$O excmd.$O file.$O snarf.$O snarf9.$O rx.$O search.$O job.$O cmd.$O exec.$O lex.$O hl.$O
+HFILES=compat.h coil.h host.h shell.h
+CFLAGS=$CFLAGS -DPLAN9 -I.
+
+</sys/src/cmd/mkone
+
+# mk install also installs the man page (needs write access to /sys/man/1).
+install:V: /sys/man/1/coil
+
+/sys/man/1/coil: ../man/1/coil
+	cp $prereq $target
+
+# relink when libcell changes
+$O.out: /$objtype/lib/libcell.a
+
+%.$O: $HFILES

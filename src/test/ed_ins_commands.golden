@@ -1,0 +1,29 @@
+open 0
+sel INS [0,0)*
+mode INS
+sel NOR [0,1)*
+mode NOR
+open 0
+sel INS [1,1)*
+sel NOR [1,2)*
+open 0
+sel INS [1,1)*
+sel NOR [1,2)*
+open 0
+sel INS [8,8)*
+sel NOR [8,9)*
+open 0
+sel INS [7,7)*
+sel NOR [7,8)*
+open 0
+text "\tint x;\n\t\nint y;\n"
+sel INS [9,9)*
+sel NOR [9,10)*
+open 0
+text "\t\n\tint x;\nint y;\n"
+sel INS [1,1)*
+sel NOR [1,2)*
+open 0
+text "\tint x;\n\nint y;\n"
+sel INS [8,8)*
+sel NOR [8,9)*

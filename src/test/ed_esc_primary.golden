@@ -1,0 +1,13 @@
+open 0
+sel NOR [0,1)*
+sel NOR [0,1)*
+sel NOR [0,1) [6,7)*
+sel NOR [6,7)*
+mode NOR
+mode SEL
+mode NOR
+sel NOR [0,1)* [4,5)
+sel NOR [0,1)*
+open 0
+sel NOR [2,4)* [7,10) [13,14)
+sel NOR [2,4)*

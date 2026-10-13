@@ -1,0 +1,16 @@
+# the language follows :e, :e! and a first :w name; tab settings follow it
+size 6 30
+file a.txt "int a;\n"
+file b.c "int b;\n"
+file c.md "int c;\n"
+open a.txt
+dump screen
+keys ":e b.c<ret>"
+dump screen
+keys "ix<esc>"
+keys ":e! b.c<ret>"
+dump screen
+keys ":e c.md<ret>"
+dump screen
+keys "i<tab><esc>"
+dump text

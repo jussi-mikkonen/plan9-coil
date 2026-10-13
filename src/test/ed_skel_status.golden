@@ -1,0 +1,9 @@
+open 0
+status NOR c.txt 1:1 crlf
+text "\r\na\r\nb\r\n"
+status INS c.txt [+] 2:1 crlf
+text "a\r\nb\r\n"
+status NOR c.txt [+] 1:1 crlf
+open 0
+status NOR l.txt 1:1
+text "\na\nb\n"

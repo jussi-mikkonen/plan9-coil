@@ -1,0 +1,13 @@
+file a.c "int x;\nint y;\n"
+open a.c
+keys "miwc"
+dump mode
+dump text
+keys "foo<esc>"
+dump text
+dump sel
+dump mode
+dump reg
+keys "u"
+dump text
+dump sel

@@ -1,0 +1,5 @@
+open 0
+text "f b\n"
+sel NOR [1,2) [3,4)*
+msg "4 changes"
+text "foo boo\n"

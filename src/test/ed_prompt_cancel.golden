@@ -1,0 +1,7 @@
+open 0
+prompt off
+text "x\n"
+msg ""
+quit 0
+prompt : ""
+prompt off

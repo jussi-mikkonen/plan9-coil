@@ -1,0 +1,17 @@
+file b.txt "ab\r\ncd\r\n"
+open b.txt
+keys "lll"
+dump sel
+keys "d"
+dump text
+open b.txt
+keys "ll"
+dump sel
+keys "d"
+dump text
+dump sel
+open b.txt
+keys "llllh"
+dump sel
+keys "d"
+dump text

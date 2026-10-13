@@ -1,0 +1,25 @@
+file a.txt "ab\ncd\n"
+open a.txt
+keys "h"
+dump sel
+keys "l"
+dump sel
+keys "l"
+dump sel
+keys "l"
+dump sel
+keys "lll"
+dump sel
+keys "h"
+dump sel
+open a.txt
+keys "<right><down>"
+dump sel
+keys "<left><up>"
+dump sel
+file e.txt ""
+open e.txt
+keys "hl"
+dump sel
+keys "jk"
+dump sel

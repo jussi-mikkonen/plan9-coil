@@ -1,0 +1,5 @@
+open 0
+sel NOR [4,5)*
+sel NOR [2,3)*
+sel NOR [0,1)*
+sel NOR [8,9)*

@@ -1,0 +1,16 @@
+# g and v test each selection: line selections from %x, then delete by test
+file a.txt "foo 1\nbar 2\nfoo 3\n"
+open a.txt
+keys ":%x<ret>"
+dump sel
+keys ":g/foo/ d<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+dump text
+dump sel
+keys ":v/foo/ d<ret>"
+dump text
+dump sel
+dump msg

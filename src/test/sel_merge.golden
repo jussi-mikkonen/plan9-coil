@@ -1,0 +1,13 @@
+sel [0,8)*
+sel [0,3)* [3,6)
+sel [2,4)*
+sel [1,2) [9,5)*
+sel [7,2)*
+sel [0,2) [4,6) [8,10)*
+sel [0,2) [4,6)*
+sel [6,8)*
+sel [3,3)* [5,5)
+check ok
+check bad unsorted
+check bad overlap
+check bad out of range

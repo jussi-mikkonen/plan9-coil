@@ -1,0 +1,14 @@
+load "0123456789"
+ins 5 "abc"
+ins 11 "XY"
+text
+pieces
+delsave 3 10
+text
+len
+pieces
+restore 3
+text
+len
+pieces
+check

@@ -1,0 +1,17 @@
+# first match only by default, every match with g; empty matches follow the scan rule
+file a.txt "o-o-o\n"
+file b.txt "ab"
+open a.txt
+keys ":%s/o/0/<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+keys ":%s/o/0/g<ret>"
+dump text
+dump sel
+dump msg
+open b.txt
+keys ":%s/x*/-/g<ret>"
+dump text
+dump sel

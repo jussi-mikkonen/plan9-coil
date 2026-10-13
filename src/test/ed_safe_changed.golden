@@ -1,0 +1,10 @@
+open 0
+msg "a.c changed on disk; :w! overwrites"
+status NOR a.c [+] 1:2  a.c changed on disk; :w! overwrites
+host a.c "other\n"
+msg "a.c changed on disk; :w! overwrites"
+msg "wrote a.c 8"
+status NOR a.c 1:2  wrote a.c 8
+host a.c "xint x;\n"
+stamp file app 0 vers 3 mtime 1004 len 8
+hoststamp file app 0 vers 3 mtime 1004 len 8 perm 644

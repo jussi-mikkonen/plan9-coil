@@ -1,0 +1,6 @@
+# windowed scan == whole-buffer regexec for single-line patterns (lines <= 6 bytes, windows 8/16/64),
+# and for a\nb whose lookahead (64 KiB) always covers the match
+fuzz 1 200
+fuzz 2 200
+fuzz 3 200
+fuzz 4 200

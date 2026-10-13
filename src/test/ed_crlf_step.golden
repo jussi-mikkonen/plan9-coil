@@ -1,0 +1,10 @@
+open 0
+sel NOR [4,5)*
+text "ab\r\nd\r\n"
+open 0
+sel NOR [2,4)*
+text "abcd\r\n"
+sel NOR [2,3)*
+open 0
+sel NOR [4,5)*
+text "ab\r\nd\r\n"

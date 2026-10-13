@@ -1,0 +1,15 @@
+open 0
+msg "register empty"
+text "foo bar\n"
+sel NOR [0,4)*
+text "foo foo bar\n"
+sel NOR [4,8)*
+reg 1
+r "foo "
+text "foo bar\n"
+sel NOR [0,4)*
+text "foo foo bar\n"
+sel NOR [0,4)*
+open 0
+text "ab\ncd\nab\n"
+sel NOR [6,9)*

@@ -1,0 +1,28 @@
+lang c tab 4 tabs
+bracket 1 -> 11
+bracket 11 -> 1
+bracket 3 -> 5
+bracket 5 -> 3
+bracket 8 -> 10
+bracket 10 -> 8
+bracket 12 -> -1
+bracket 0 -> -1
+bracket 0 -> 10
+bracket 10 -> 0
+bracket 5 -> -1
+bracket 5 -> -1
+bracket 9 -> 11
+bracket 11 -> 9
+bracket 0 -> -1
+bracket 1 -> -1
+lang plain tab 4 tabs
+bracket 5 -> 8
+bracket 8 -> 5
+bracket 11 -> 13
+bracket 13 -> 11
+lang c tab 4 tabs
+bracket 0 -> -1
+bracket 1202 -> -1
+bracket 0 -> 802
+bracket 802 -> 0
+bracket 3 -> -1

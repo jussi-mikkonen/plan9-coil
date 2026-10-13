@@ -1,0 +1,31 @@
+bulkmin 0
+# every structural command is one undo step; U redoes it with its selection
+file a.txt "foo bar foo\n"
+open a.txt
+keys ":%x/foo/ c/X/<ret>"
+keys "u"
+dump text
+dump sel
+keys "U"
+dump text
+dump sel
+keys "u"
+keys ":%x/o/ d<ret>"
+keys "u"
+dump text
+dump sel
+keys "U"
+dump text
+dump sel
+keys "u"
+keys ":%x/bar/ i/>/<ret>"
+dump text
+dump sel
+keys "u"
+dump text
+keys ":%x/[a-z]+/ g/o/ d<ret>"
+dump text
+dump sel
+keys "u"
+dump text
+dump sel

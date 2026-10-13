@@ -1,0 +1,17 @@
+file b.c "1\n2\n3\n4\n"
+file x:3 "q\nr\n"
+open b.c:3
+dump sel
+open x:3
+dump sel
+dump status
+open b.c:99
+dump sel
+open b.c:99999999999999
+dump sel
+open b.c:0
+dump sel
+open b.c:
+dump status
+open nofile:2
+dump status

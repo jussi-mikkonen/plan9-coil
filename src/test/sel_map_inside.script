@@ -1,0 +1,16 @@
+load "hello world\n"
+sel 2 8
+map 4 2 0
+dump
+sel 4 6
+map 2 8 0
+dump
+sel 4 6
+map 2 8 3
+dump
+sel 3 5 7 9
+map 2 6 1
+dump
+norm
+dump
+check

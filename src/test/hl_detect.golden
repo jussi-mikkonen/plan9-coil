@@ -1,0 +1,29 @@
+detect a.c c
+detect a.h c
+detect a.y c
+detect a.l c
+detect x.rc rc
+detect script rc
+detect script rc
+detect script plain
+detect script plain
+detect script rc
+detect mkfile mkfile
+detect /sys/src/cmd/mkfile mkfile
+detect mkfile.unix mkfile
+detect foo.mk mkfile
+detect mkone mkfile
+detect mkmany mkfile
+detect mklib mkfile
+detect mksyslib mkfile
+detect README.md markdown
+detect x.markdown plain
+detect README plain
+detect x.C plain
+detect notes.txt rc
+detect a.c c
+detect  plain
+lang bogus nil
+lang markdown tab 4 spaces
+lang c tab 4 tabs
+lang plain tab 4 tabs

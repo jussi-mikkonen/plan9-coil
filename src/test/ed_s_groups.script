@@ -1,0 +1,15 @@
+# & is the whole match, \1..\9 the groups (unset or out of range: empty), \n \t newline and tab, \& literal
+file a.txt "ab ab\n"
+file b.txt "xy\n"
+open a.txt
+keys ":%s/(a)(b)/\\2\\1&/g<ret>"
+dump text
+dump sel
+dump msg
+open b.txt
+keys ":%s/x/[\\&\\9&]/<ret>"
+dump text
+dump sel
+keys ":%s/y/\\n\\t/<ret>"
+dump text
+dump sel

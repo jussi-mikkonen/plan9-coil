@@ -1,0 +1,33 @@
+# backward scan: greatest start before the limit
+text "aaa"
+rfind "aa" 3
+rfind "aa" 2
+rfind "aa" 1
+rfind "aa" 0
+text "ab\nxab\nx"
+rfind "^x" 5
+rfind "^x" 3
+rfind "^x" 8
+rfind "b$" 8
+rfind "b$" 4
+text "foo\nbar foo"
+rfind "o\nb" 5
+rfind "foo" 11
+rfind "foo" 12 1 12
+rfind "foo" 12 0 9
+rfind "a*" 4
+text "xx foo yy foo zz\nfoo"
+rfind "xx" 20
+rfind "foo" 20
+rfind "foo" 12
+rfind "foo" 6
+rfind "foo" 3
+win 8
+rfind "foo" 20
+rfind "foo" 12
+rfind "foo" 6
+rfind "foo" 3
+win 4
+budget 5
+rfind "xx" 20
+rfind "foo" 20

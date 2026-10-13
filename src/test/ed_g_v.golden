@@ -1,0 +1,10 @@
+open 0
+sel NOR [0,6)* [6,12) [12,18)
+text "bar 2\n"
+sel NOR [0,1) [6,6)*
+msg "2 changes"
+text "foo 1\nbar 2\nfoo 3\n"
+sel NOR [0,6)* [6,12) [12,18)
+text "foo 1\nfoo 3\n"
+sel NOR [6,7)*
+msg "1 change"

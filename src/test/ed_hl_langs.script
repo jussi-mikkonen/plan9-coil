@@ -1,0 +1,17 @@
+# every language highlights on screen; the rc shebang selects rc without a name
+size 8 40
+file s.rc "if(~ $#* 0) echo 'x' # c\n"
+file mkfile "TARG=coil\n%.$O: x.c\n\tcp $prereq $target\n"
+file README.md "# Title\nsome *em* and `code`\n- [a](b)\n"
+file notes.txt "if(x) echo 'x' # c\n"
+file run "#!/bin/rc\nif(x) exit\n"
+open s.rc
+dump screen
+keys ":e mkfile<ret>"
+dump screen
+keys ":e README.md<ret>"
+dump screen
+keys ":e notes.txt<ret>"
+dump screen
+keys ":e run<ret>"
+dump screen

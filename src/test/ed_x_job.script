@@ -1,0 +1,17 @@
+# a structural command on a big file is an interruptible job; Esc applies nothing
+filerep big.txt 2000 "ab9defghi\n"
+open big.txt
+slice 1024
+autowork off
+keys ":%x/9/ c/N/<ret>"
+dump job
+keys "<esc>"
+dump job
+dump msg
+dump sel
+keys "u"
+dump msg
+keys ":%x/9/ c/N/<ret>"
+work
+dump job
+dump msg

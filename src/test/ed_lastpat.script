@@ -1,0 +1,21 @@
+# an empty pattern reuses the last one, shared with /; a command does not replace it
+file a.txt "foo bar foo\n"
+open a.txt
+keys ":x// d<ret>"
+dump msg
+dump text
+keys "/foo<ret>"
+dump sel
+keys ":%x// c/X/<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+keys ":%s//Y/g<ret>"
+dump text
+dump msg
+keys "u"
+keys ":%x/bar/ d<ret>"
+dump text
+keys "n"
+dump sel

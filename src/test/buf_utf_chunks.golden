@@ -1,0 +1,6 @@
+len 200000
+lines 1
+pieces 4 maxlen 65536
+cuts ok
+check ok
+roundtrip SAME 200000

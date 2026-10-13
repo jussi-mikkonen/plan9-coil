@@ -1,0 +1,11 @@
+open 0
+sel NOR [1,2)*
+msg "bad regexp: regexp a(: parsing error"
+mode NOR
+sel NOR [1,2)*
+search none
+msg "bad regexp: regexp *a: syntax error: *"
+msg "bad regexp: No closing ] for class"
+msg ""
+sel NOR [5,10)*
+search "plain" dir 1

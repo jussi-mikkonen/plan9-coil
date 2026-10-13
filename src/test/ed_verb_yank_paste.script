@@ -1,0 +1,22 @@
+file a.txt "foo bar\n"
+open a.txt
+keys "p"
+dump msg
+dump text
+keys "wy"
+dump sel
+keys "p"
+dump text
+dump sel
+dump reg
+keys "u"
+dump text
+dump sel
+keys "P"
+dump text
+dump sel
+file b.txt "ab\ncd\n"
+open b.txt
+keys "xyGp"
+dump text
+dump sel

@@ -1,0 +1,5 @@
+# differential fuzz: random edits and undo/redo, the cached highlight equals a full lex
+lang c
+fuzz 1 500
+fuzz 2 500
+fuzz 3 2000

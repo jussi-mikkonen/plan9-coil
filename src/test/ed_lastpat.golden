@@ -1,0 +1,11 @@
+open 0
+msg "no previous pattern"
+text "foo bar foo\n"
+sel NOR [8,11)*
+text "X bar X\n"
+sel NOR [0,1) [6,7)*
+msg "2 changes"
+text "Y bar Y\n"
+msg "2 changes"
+text "foo  foo\n"
+sel NOR [5,8)*

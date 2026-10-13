@@ -1,0 +1,7 @@
+# a bare :%x/re/ selects the matches, primary first; the selection list is left for Esc
+file a.txt "a 12 b 345 c 6\n"
+open a.txt
+keys ":%x/[0-9]+/<ret>"
+dump sel
+dump mode
+dump msg

@@ -1,0 +1,8 @@
+open 0
+snarf "foo "
+puts 1 gets 1
+text "foo foo bar\n"
+reg 1
+r "foo "
+snarf "foo "
+puts 1 gets 2

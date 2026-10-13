@@ -1,0 +1,11 @@
+open 0
+msg "too many changes (more than 3); narrow the range"
+text "aaaaa\n"
+msg "nothing to undo"
+msg "too many changes (more than 3); narrow the range"
+text "aaaaa\n"
+msg "buffer full"
+text "aaaaa\n"
+msg "buffer full"
+text "aaaaa\n"
+msg "nothing to undo"

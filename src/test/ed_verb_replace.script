@@ -1,0 +1,9 @@
+file a.txt "foo bar\n"
+open a.txt
+keys "miwyllmiwR"
+dump text
+dump sel
+dump reg
+keys "u"
+dump text
+dump sel

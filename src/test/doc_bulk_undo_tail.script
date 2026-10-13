@@ -1,0 +1,15 @@
+bulkmin 0
+load "abc\n"
+ins 2 "1"
+seal
+ins 2 "2"
+undo
+dump
+redo
+undo
+undo
+ins 3 "Z"
+dump
+redo
+undo
+dump

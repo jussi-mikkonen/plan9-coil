@@ -1,0 +1,20 @@
+file p.txt "one\ntwo\n\nthree\n\n  \nfour\nfive\n"
+open p.txt
+keys "ggmip"
+dump sel
+keys "ggmap"
+dump sel
+keys "4Gmip"
+dump sel
+keys "4Gmap"
+dump sel
+keys "3Gmip"
+dump sel
+keys "3Gmap"
+dump sel
+keys "5Gmip"
+dump sel
+keys "8Gmip"
+dump sel
+keys "8Gmap"
+dump sel

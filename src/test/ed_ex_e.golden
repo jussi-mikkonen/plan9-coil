@@ -1,0 +1,11 @@
+open 0
+status NOR b.c 1:1
+sel NOR [0,1)*
+msg "unsaved changes; :e! discards them"
+status NOR b.c [+] 1:2  unsaved changes; :e! discards them
+status NOR c.c 2:1
+sel NOR [3,4)*
+text "c1\nc2\nc3\n"
+status NOR c.c 2:1
+msg "new file"
+status NOR nosuch.c [new] 1:1  new file

@@ -1,0 +1,15 @@
+# more than 50000 changes: "applying N changes..." is shown before the one non-interruptible step
+filerep big.txt 60000 "a\n"
+filerep small.txt 50000 "a\n"
+open big.txt
+autowork off
+keys ":%x/a/ c/b/<ret>"
+dump msg
+dump job
+work
+dump msg
+dump job
+open small.txt
+keys ":%x/a/ c/b/<ret>"
+dump msg
+dump job

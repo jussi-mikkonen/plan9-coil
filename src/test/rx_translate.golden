@@ -1,0 +1,9 @@
+t "a\nb"
+t "a\tb"
+t "a\x5c\x5cnb"
+t "a\x5c/b"
+t "a\x5c"
+t "\n\n\t"
+t "plain"
+t ""
+error regexp too long

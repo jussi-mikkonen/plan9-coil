@@ -1,0 +1,9 @@
+file u.c "1\n2\n3\n4\n5\n"
+open u.c
+keys ":foo<ret>"
+dump msg
+keys ":<ret>"
+dump msg
+dump sel
+keys ":  4  <ret>"
+dump sel

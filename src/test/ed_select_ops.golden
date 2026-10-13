@@ -1,0 +1,26 @@
+open 0
+sel NOR [1,2)*
+sel NOR [0,3)*
+sel NOR [0,6)*
+sel NOR [0,9)*
+sel NOR [0,9)*
+sel NOR [8,9)*
+sel NOR [9,8)*
+sel NOR [8,9)*
+sel NOR [0,9)*
+sel NOR [8,9)*
+sel NOR [0,1)*
+sel SEL [0,4)*
+sel SEL [0,6)*
+open 0
+sel NOR [3,4)*
+sel NOR [3,5)*
+sel NOR [3,5)*
+sel NOR [0,5)*
+sel NOR [5,0)*
+sel NOR [0,1)*
+open 0
+sel NOR [0,0)*
+sel NOR [0,0)*
+sel NOR [0,0)*
+sel NOR [0,0)*

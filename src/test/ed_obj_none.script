@@ -1,0 +1,39 @@
+file n.txt "plain text\nno pairs here\n"
+open n.txt
+keys "mi("
+dump sel
+dump msg
+keys "ma{"
+dump sel
+dump msg
+keys "mi\""
+dump sel
+dump msg
+keys "mi`"
+dump sel
+dump msg
+keys "mi["
+dump sel
+dump msg
+keys "mix"
+dump sel
+dump msg
+keys "mi<esc>"
+dump sel
+dump msg
+file u.c "f(a\n"
+open u.c
+keys "2lmi("
+dump sel
+dump msg
+keys "ma)"
+dump sel
+dump msg
+file e.c "a()b\n"
+open e.c
+keys "lmi("
+dump sel
+dump msg
+keys "ma("
+dump sel
+dump msg

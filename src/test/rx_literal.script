@@ -1,0 +1,7 @@
+# literal patterns: regcomplit, no escapes; a real newline makes it multiline
+lit "a.b*"
+lit "a(b"
+lit "a\nb"
+comp "a\nb"
+comp "a\\nb"
+comp "ab"

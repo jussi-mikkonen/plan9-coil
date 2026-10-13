@@ -1,0 +1,8 @@
+open 0
+msg "applying 60000 changes..."
+job running 120000/120000
+msg "60000 changes"
+job none
+open 0
+msg "50000 changes"
+job none

@@ -1,0 +1,11 @@
+# Linux test binaries (the drivers' .c files stay tracked)
+src/test/*test
+src/test/bench
+src/test/librx.a
+src/test/rxo/
+# Plan 9 objects and outputs
+*.[0125678vqki]
+[0125678vqki].*
+!*.c
+!*.h
+src/test/*.out

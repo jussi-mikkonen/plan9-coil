@@ -1,0 +1,13 @@
+# a NUL byte is ordinary text: it neither hides a later match nor shifts positions
+text "a\0ab\0b"
+find "ab"
+find "b.b"
+find "^a"
+text "a\0\nab\0\nb\0b\n"
+find "ab"
+find "b.b"
+find "^a"
+win 4
+find "ab"
+find "b.b"
+find "^a"

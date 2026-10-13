@@ -1,0 +1,7 @@
+# NUL, invalid UTF-8, surrogate encoding, CRLF, no final newline
+load "a\0b\xff\xc3\r\nx\xed\xa0\x80\r\nlast"
+len
+lines
+text
+roundtrip
+check

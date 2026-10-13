@@ -1,0 +1,25 @@
+open 0
+sel NOR [0,1)*
+msg "no object"
+sel NOR [0,1)*
+msg "no object"
+sel NOR [0,1)*
+msg "no object"
+sel NOR [0,1)*
+msg "no object"
+sel NOR [0,1)*
+msg "no object"
+sel NOR [0,1)*
+msg ""
+sel NOR [0,1)*
+msg ""
+open 0
+sel NOR [2,3)*
+msg "no object"
+sel NOR [2,3)*
+msg "no object"
+open 0
+sel NOR [1,2)*
+msg "no object"
+sel NOR [1,3)*
+msg ""

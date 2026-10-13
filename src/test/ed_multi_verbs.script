@@ -1,0 +1,22 @@
+file a.txt "one two three\n"
+open a.txt
+setsel 0 3 4 7 8 13
+dump sel
+keys "d"
+dump text
+dump sel
+dump reg
+keys "u"
+dump text
+dump sel
+keys "yp"
+dump text
+dump sel
+keys "u"
+dump text
+keys "iX<esc>"
+dump text
+dump sel
+keys "u"
+dump text
+dump sel

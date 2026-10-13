@@ -1,0 +1,7 @@
+# empty matches follow the scanner's rule (same as sam): "baab" with a* gives -b-b-
+file a.txt "baab"
+open a.txt
+keys ":%x/a*/ c/-/<ret>"
+dump text
+dump sel
+dump msg

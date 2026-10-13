@@ -1,0 +1,21 @@
+file a.c "a1\n"
+file b.c "b1\nb2\n"
+file c.c "c1\nc2\nc3\n"
+open a.c
+keys ":e b.c<ret>"
+dump status
+dump sel
+keys "ix<esc>"
+keys ":e c.c<ret>"
+dump msg
+dump status
+keys ":e! c.c:2<ret>"
+dump status
+dump sel
+keys "iy<esc>"
+keys ":e!<ret>"
+dump text
+dump status
+keys ":e nosuch.c<ret>"
+dump msg
+dump status

@@ -1,0 +1,20 @@
+# the prompt edits only at its end: Backspace, Ctrl-W, Ctrl-U, whole-rune erase
+file a.c "x\n"
+open a.c
+keys ":"
+dump prompt
+keys "wq foo"
+dump prompt
+keys "<bs>"
+dump prompt
+keys "<bs>"
+dump prompt
+keys "<c-w>"
+dump prompt
+keys "<c-u>"
+dump prompt
+keys "é"
+dump prompt
+keys "<bs>"
+dump prompt
+dump text

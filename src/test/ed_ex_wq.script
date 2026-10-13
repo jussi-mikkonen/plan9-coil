@@ -1,0 +1,6 @@
+file w.c "x\n"
+open w.c
+keys "iab<esc>"
+keys ":wq<ret>"
+dump host w.c
+dump quit

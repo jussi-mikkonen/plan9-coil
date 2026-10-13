@@ -1,0 +1,28 @@
+# coil light theme (acme-like). Install with:
+#   cp lib/theme.light $home/lib/coil/theme
+default fg=#000000 bg=#ffffea
+selection bg=#eeee9e
+cursor fg=#ffffea bg=#000000
+status fg=#000000 bg=#eaffff
+message fg=#99884c
+error fg=#aa0000
+ctrl fg=#4c66aa
+invalid fg=#aa0000
+keyword fg=#22448a
+type fg=#5c3c88
+comment fg=#6c7a6c
+string fg=#2e6a2e
+number fg=#8a4a1a
+preproc fg=#7a5a1a
+variable fg=#1a6a6a
+target fg=#7a4a00
+recipe fg=#3a3a3a
+heading fg=#22448a underline
+emph fg=#5c3c88
+strong fg=#000000 underline
+code fg=#1a6a6a
+link fg=#22448a
+listmark fg=#8a4a1a
+match fg=#000000 bg=#9eeeee
+trailing bg=#f0c8c8
+linenr fg=#99994c

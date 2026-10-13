@@ -1,0 +1,9 @@
+file a.txt "ab\r\ncd\r\n"
+open a.txt
+keys "A<ret>"
+dump text
+dump sel
+open a.txt
+keys "jo"
+dump text
+dump sel

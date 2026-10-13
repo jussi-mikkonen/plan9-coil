@@ -1,0 +1,8 @@
+# no newlines: chunk cuts must fall on rune starts
+gen utf 20000
+len
+lines
+pieces
+cuts
+check
+roundtrip

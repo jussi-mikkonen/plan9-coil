@@ -1,0 +1,19 @@
+# history: empty lines and an exact repeat of the newest are not stored
+file a.c "1\n2\n3\n4\n5\n"
+open a.c
+keys ":5<ret>"
+keys ":3<ret>"
+keys ":<ret>"
+keys ":3<ret>"
+keys ":<up>"
+dump prompt
+keys "<up>"
+dump prompt
+keys "<up>"
+dump prompt
+keys "<down>"
+dump prompt
+keys "<down>"
+dump prompt
+keys "<down>"
+dump prompt

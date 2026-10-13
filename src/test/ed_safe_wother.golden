@@ -1,0 +1,6 @@
+open 0
+msg "log.txt: append-only file, not written"
+host log.txt "old\n"
+msg "wrote b.c 8"
+host b.c "xint x;\n"
+status NOR a.c [+] 1:2  wrote b.c 8

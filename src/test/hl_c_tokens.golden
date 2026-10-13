@@ -1,0 +1,52 @@
+lang c tab 4 tabs
+l int x = 42;
+s ttt.....nn.
+st 0
+l static uchar *p = nil;
+s kkkkkk.ttttt......kkk.
+st 0
+l u32int a; Rune r; Foo f;
+s tttttt....tttt..........
+st 0
+l x = 0x1F + 1.5e-3 + .5;
+s ....nnnn...nnnnnn...nn.
+st 0
+l a1 = b2;
+s ........
+st 0
+l s = "a\\"b"; c = '\\'';
+s ....ssssss......ssss.
+st 0
+l "unterminated
+s sssssssssssss
+st 0
+l x; // note
+s ...ccccccc
+st 0
+l x /* a */ y
+s ..ccccccc..
+st 0
+l a /* open
+s ..ccccccc
+st 1
+l #include <u.h>
+s pppppppppppppp
+st 0
+l   #define X 1 /* c */
+s ..ppppppppppppccccccc
+st 0
+l #define Y \\
+s ppppppppppp
+st 2
+l a\xff\x00 b\xffint
+s ......ttt
+st 0
+l printf("%d", f(x));
+s .......ssss........
+st 0
+l for(;;) return sizeof(vlong);
+s kkk.....kkkkkk.kkkkkk.ttttt..
+st 0
+l 
+s 
+st 0

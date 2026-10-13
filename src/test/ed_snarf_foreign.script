@@ -1,0 +1,8 @@
+file a.txt "ab cd ef\n"
+open a.txt
+snarf set "from sam"
+setsel 0 1 3 4 6 7
+keys "P"
+dump text
+dump sel
+dump reg

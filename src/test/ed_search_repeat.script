@@ -1,0 +1,19 @@
+# an empty pattern reuses the last one; with none there is "no previous pattern"; Up recalls it
+file r.txt "foo bar foo bar\nfoo\n"
+open r.txt
+keys "/<ret>"
+dump msg
+dump search
+keys "/foo<ret>"
+dump sel
+keys "/<ret>"
+dump sel
+dump search
+keys "/"
+dump prompt
+keys "<up>"
+dump prompt
+keys "<esc>"
+dump mode
+keys "n"
+dump sel

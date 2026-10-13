@@ -1,0 +1,7 @@
+# a line longer than the cap is lexed only up to the cap; the state at the cap is carried out
+lang c
+cap 16
+load "int a; int b; int c; int d; int e; int f;\n/* aaaaaaaaaaaaaaaaaaaaaaa\nint x;\n"
+hl all
+cap 4096
+hl all

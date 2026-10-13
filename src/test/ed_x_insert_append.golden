@@ -1,0 +1,9 @@
+open 0
+text "a[bc\n[b[b\n"
+sel NOR [1,2) [5,6) [7,8)*
+msg "3 changes"
+text "ab]c\nb]b]\n"
+sel NOR [2,3) [6,7) [8,9)*
+text "ac\n\n"
+sel NOR [1,2) [3,4)*
+msg "3 changes"

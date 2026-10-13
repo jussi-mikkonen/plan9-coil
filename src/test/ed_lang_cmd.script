@@ -1,0 +1,18 @@
+# :lang shows, forces and rejects languages
+size 6 40
+file a.txt "int x = 42; /* c */\n"
+open a.txt
+keys ":lang<ret>"
+dump msg
+keys ":lang c<ret>"
+dump msg
+dump screen
+keys ":lang foo<ret>"
+dump msg
+keys ":lang<ret>"
+dump msg
+keys ":lang 0123456789012345678901234567890123456789012345678901234567<ret>"
+dump msg
+keys ":lang plain<ret>"
+dump msg
+dump screen

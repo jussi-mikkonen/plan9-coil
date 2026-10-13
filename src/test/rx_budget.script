@@ -1,0 +1,11 @@
+# a spent budget returns Smore; resuming gives exactly the same matches
+text "ab ab\nab ab\nab ab\nxx ab\nab"
+win 8
+find "ab"
+budget 7
+find "ab"
+budget 1
+find "ab"
+find "^ab"
+budget 0
+find "^ab"

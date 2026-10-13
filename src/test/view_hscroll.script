@@ -1,0 +1,15 @@
+# horizontal scroll: a wide rune cut by the left edge shows a space in its visible half
+size 2 8
+width eaw
+tab 4
+load "abc\xe4\xb8\xad\xe4\xb8\xad\xe4\xb8\xad\xe4\xb8\xad\txyzdefghi\n\tq\n"
+hscroll 0
+row 0
+hscroll 9
+row 0
+hscroll 10
+row 0
+hscroll 11
+row 0
+hscroll 2
+row 1

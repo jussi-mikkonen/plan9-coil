@@ -1,0 +1,5 @@
+open 0
+msg "unknown command 'f'"
+msg ""
+sel NOR [0,1)*
+sel NOR [6,7)*

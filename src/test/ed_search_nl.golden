@@ -1,0 +1,6 @@
+open 0
+sel NOR [10,13)*
+sel NOR [17,19)*
+sel NOR [20,24)*
+msg ""
+sel NOR [9,11)*

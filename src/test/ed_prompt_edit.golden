@@ -1,0 +1,10 @@
+open 0
+prompt : ""
+prompt : "wq foo"
+prompt : "wq fo"
+prompt : "wq f"
+prompt : "wq "
+prompt : ""
+prompt : "\xc3\xa9"
+prompt : ""
+text "x\n"

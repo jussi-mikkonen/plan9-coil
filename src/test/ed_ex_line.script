@@ -1,0 +1,11 @@
+file l.c "1\n2\n3\n4\n5\n"
+open l.c
+keys ":3<ret>"
+dump sel
+setsel 0 1 2 3 4 5
+keys ":2<ret>"
+dump sel
+keys ":0<ret>"
+dump sel
+keys ":999<ret>"
+dump sel

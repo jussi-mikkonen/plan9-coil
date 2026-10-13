@@ -1,0 +1,3 @@
+status NOR [no name] 1:1
+open -1 huge.c: file too large
+status NOR [no name] 1:1  huge.c: file too large

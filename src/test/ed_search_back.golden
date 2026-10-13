@@ -1,0 +1,9 @@
+open 0
+sel NOR [19,20)*
+sel NOR [16,19)*
+sel NOR [12,15)*
+sel NOR [6,9)*
+search "foo" dir -1
+sel NOR [0,3)*
+msg ""
+open 0

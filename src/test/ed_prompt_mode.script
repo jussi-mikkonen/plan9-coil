@@ -1,0 +1,14 @@
+# the prompt keeps mode and selection; Insert mode types a colon
+file a.c "abc def\n"
+open a.c
+keys "vl"
+dump sel
+keys ":"
+dump prompt
+keys "<esc>"
+dump sel
+dump mode
+keys "<esc>"
+keys "i:<esc>"
+dump text
+dump prompt

@@ -1,0 +1,18 @@
+file a.txt "a\xc3\xa9\nb\xe2\x82\xacc\n"
+open a.txt
+keys "%r\xc3\xb6"
+dump text
+dump sel
+dump reg
+file b.txt "a\r\nb\r\n"
+open b.txt
+keys "%rx"
+dump text
+dump sel
+file c.txt "a\xffb"
+open c.txt
+keys "%r."
+dump text
+dump sel
+keys "u"
+dump text

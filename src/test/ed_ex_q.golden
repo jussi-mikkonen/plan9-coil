@@ -1,0 +1,8 @@
+open 0
+quit 1
+open 0
+quit 0
+msg "unsaved changes; :q! quits"
+quit 0
+msg "q: too many arguments"
+quit 1

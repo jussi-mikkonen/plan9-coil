@@ -1,0 +1,16 @@
+# :s/re/text/ replaces the first match in the selection; the text is selected; one undo step
+file a.txt "foo foo\n"
+open a.txt
+setsel 0 7
+keys ":s/foo/bar/<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+dump text
+dump sel
+keys "u"
+dump msg
+keys ":s/zzz/y/<ret>"
+dump text
+dump msg

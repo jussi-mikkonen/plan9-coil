@@ -1,0 +1,4 @@
+lang mkfile tab 4 tabs
+fuzz 1 500 ok
+fuzz 2 500 ok
+fuzz 3 2000 ok

@@ -1,0 +1,37 @@
+lang mkfile tab 4 tabs
+l </$objtype/mkfile
+s ppppppppppppppppp
+st 0
+l TARG=coil
+s vvvv.....
+st 0
+l OFILES=main.$O ${X}
+s vvvvvv......vv.vvvv
+st 0
+l # comment
+s ccccccccc
+st 0
+l %.$O: $HFILES
+s TTvv..vvvvvvv
+st 0
+l install:V: /sys/man/1/coil
+s TTTTTTT...................
+st 0
+l \x09cp $prereq $target # copy
+s rrrrvvvvvvvrvvvvvvvrcccccc
+st 0
+l \x09echo 'a b'
+s rrrrrrsssss
+st 0
+l X = a # c
+s v.....ccc
+st 0
+l all:V: a b
+s TTT.......
+st 0
+l 
+s 
+st 0
+l    
+s rrr
+st 0

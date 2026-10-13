@@ -1,0 +1,26 @@
+file f.txt "one\ntwo\nthree\nfour\n"
+open f.txt
+keys "ge"
+dump sel
+keys "gg"
+dump sel
+keys "G"
+dump sel
+keys "3G"
+dump sel
+keys "99G"
+dump sel
+keys "1G"
+dump sel
+keys "ge"
+dump sel
+keys "2G"
+dump sel
+file e.txt ""
+open e.txt
+keys "ge"
+dump sel
+keys "G"
+dump sel
+keys "gg"
+dump sel

@@ -1,0 +1,9 @@
+open 0
+quit 1
+open 0
+quit 0
+quit 0
+msg "unsaved changes; Ctrl-Q again quits"
+msg ""
+quit 0
+quit 1

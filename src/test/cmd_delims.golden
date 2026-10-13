@@ -1,0 +1,10 @@
+ok x /a,b/ d
+ok c "a/b"
+ok x /a/b/ c "x"
+error bad delimiter 'a'
+error bad delimiter '\'
+error bad delimiter '\'
+ok x /a/b/ d
+ok x /\./ d
+ok x /é/ c "ü"
+error unknown command 'b'

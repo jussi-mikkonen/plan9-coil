@@ -1,0 +1,13 @@
+file a.c "int x;\n"
+open a.c
+keys "ia<esc>"
+keys "<c-s>"
+dump status
+keys "ib<esc>"
+dump status
+keys "u"
+dump status
+keys "u"
+dump status
+keys "U"
+dump status

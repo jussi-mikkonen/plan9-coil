@@ -1,0 +1,9 @@
+open 0
+text "X bar X\n"
+sel NOR [0,1) [6,7)*
+msg "2 changes"
+text "foo bar foo\n"
+sel NOR [0,1)*
+text "X bar foo\n"
+sel NOR [0,1)*
+msg "1 change"

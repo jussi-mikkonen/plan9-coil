@@ -1,0 +1,4 @@
+# invalid bytes and C1 controls show as U+FFFD in the invalid style
+size 2 12
+load "\xff\xc3q\xc0\xaf\xc2\x85z\n"
+row 0

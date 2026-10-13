@@ -1,0 +1,5 @@
+# a real block comment spans lines; "/*" inside a string or a // comment opens nothing
+lang c
+load "int a;\nx = 1; /* start\nmiddle\nend */ y = 2;\nchar *s = \"/* not\";\nz = 3; // not /* either\nw = 4;\n"
+hl all
+check

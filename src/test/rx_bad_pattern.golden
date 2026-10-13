@@ -1,0 +1,11 @@
+error bad regexp: regexp a(: parsing error
+ok multiline 0
+error bad regexp: regexp *a: syntax error: *
+ok multiline 0
+ok multiline 0
+ok multiline 0
+ok multiline 0
+ok multiline 0
+error bad regexp: No closing ] for class
+ok multiline 0
+ok multiline 0

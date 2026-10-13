@@ -1,0 +1,13 @@
+# a 2-byte rune whose bytes sit in two pieces
+load "a\xc3"
+ins 2 "\xa9z"
+pieces
+text
+rune 0
+rune 1
+next 1
+prev 3
+snap 2
+snap 3
+rune 3
+check

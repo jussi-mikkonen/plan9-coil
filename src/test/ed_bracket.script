@@ -1,0 +1,14 @@
+# the partner of the bracket under the cursor is shown in the match style; inside a pair nothing is
+size 6 30
+file b.c "int f(int a) {\n\treturn (a);\n}\n"
+open b.c
+keys "5l"
+dump screen
+keys "gg8l"
+dump screen
+keys "gg13l"
+dump screen
+keys "gg2j"
+dump screen
+keys "gg1j2l"
+dump screen

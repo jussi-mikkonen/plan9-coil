@@ -1,0 +1,7 @@
+open 0
+sel SEL [0,2)*
+prompt : ""
+sel SEL [0,2)*
+mode SEL
+text ":abc def\n"
+prompt off

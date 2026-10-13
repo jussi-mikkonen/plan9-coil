@@ -1,0 +1,19 @@
+text "hello, there\nworld\n"
+text ">> llo, there\nworld\n"
+len 20
+lines 3
+linestart 1 14
+line 14 1
+pieces 4 maxlen 7
+text ">> llo, there\nworld\nabc\n"
+len 24
+lines 4
+pieces 5 maxlen 7
+text ">>e\nworld\nabc\n"
+len 14
+lines 4
+linestart 1 4
+linestart 2 10
+line 12 2
+pieces 4 maxlen 7
+check ok

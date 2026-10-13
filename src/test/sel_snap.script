@@ -1,0 +1,23 @@
+load "a\xc3\xa9\xe2\x82\xac\xf0\x9f\x98\x80\xffz\n"
+sel 2 2
+norm
+dump
+sel 4 5
+norm
+dump
+sel 7 9
+norm
+dump
+sel 10 11
+norm
+dump
+sel 0 99
+norm
+dump
+sel 99 98
+norm
+dump
+sel 5 8
+norm
+dump
+check

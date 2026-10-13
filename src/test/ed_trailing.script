@@ -1,0 +1,5 @@
+# trailing spaces and tabs are in the trailing style; a final CR of CRLF is not flagged
+size 8 20
+file t.txt "a  \nb\t\n   \nc \r\nd\n"
+open t.txt
+dump screen

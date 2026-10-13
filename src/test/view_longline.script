@@ -1,0 +1,7 @@
+# a line longer than 65536 bytes stops there and shows U+2026 in the ctrl style
+size 2 10
+loadrep 70000 "\n"
+hscroll 65530
+row 0
+loadrep 65536 "\ny\n"
+row 0

@@ -1,0 +1,16 @@
+file a.c "int x;\n"
+open a.c
+keys "ix<esc>"
+extmod a.c "other\n"
+keys ":w<ret>"
+dump msg
+dump status
+dump host a.c
+keys "<c-s>"
+dump msg
+keys ":w!<ret>"
+dump msg
+dump status
+dump host a.c
+dump stamp
+dump hoststamp a.c

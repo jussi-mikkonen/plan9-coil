@@ -1,0 +1,17 @@
+bulkmin 0
+file a.c "int x;\n"
+open a.c
+keys "ihello<ret>world<esc>"
+dump text
+dump sel
+keys "u"
+dump text
+dump sel
+dump status
+keys "U"
+dump text
+dump sel
+dump status
+keys "u"
+keys "u"
+dump msg

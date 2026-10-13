@@ -1,0 +1,8 @@
+open 0
+snarf "ab\xef\xbf\xbd\ncd"
+puts 1 gets 1
+text "a\x00b\xff c\x00d\nxa\x00b\xff yc\x00d\n"
+sel NOR [10,14)* [16,19)
+reg 2
+r "a\x00b\xff"
+r "c\x00d"

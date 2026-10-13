@@ -1,0 +1,5 @@
+# all 256 byte values survive load and write
+allbytes
+len
+roundtrip
+check

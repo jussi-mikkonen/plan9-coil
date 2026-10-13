@@ -1,0 +1,10 @@
+# a fence carries state across lines; a different character or a shorter run does not close it
+lang markdown
+load "text\n```c\nint x; /* no */\n```\nafter *e*\n~~~\n```\nstill\n~~~\n"
+hl all
+check
+state 3
+state 6
+load "````\nx\n```\ny\n````\nz *e*\n"
+hl all
+check

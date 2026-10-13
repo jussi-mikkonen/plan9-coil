@@ -1,0 +1,13 @@
+# cell2pos inverts pos2cell on every rune start
+size 3 20
+width eaw
+tab 4
+load "ab\tc\xe4\xb8\xadd\x01e\xff\xc2\x85z\n\n"
+roundtrip
+cell2pos 0 6
+cell2pos 0 8
+cell2pos 0 9
+cell2pos 0 19
+cell2pos 1 5
+cell2pos 2 0
+cell2pos 5 0

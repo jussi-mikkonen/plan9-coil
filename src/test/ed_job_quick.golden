@@ -1,0 +1,4 @@
+open 0
+job none
+msg ""
+sel NOR [4,7)*

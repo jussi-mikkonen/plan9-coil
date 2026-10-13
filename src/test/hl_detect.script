@@ -1,0 +1,30 @@
+# language detection: name rules first, then a #! first line when the name gave plain
+detect "a.c" ""
+detect "a.h" ""
+detect "a.y" ""
+detect "a.l" ""
+detect "x.rc" ""
+detect "script" "#!/bin/rc\n"
+detect "script" "#!/rc/bin/rc -e\n"
+detect "script" "#!/bin/rcx\n"
+detect "script" "#!/bin/sh\n"
+detect "script" "#! /bin/rc\n"
+detect "mkfile" ""
+detect "/sys/src/cmd/mkfile" ""
+detect "mkfile.unix" ""
+detect "foo.mk" ""
+detect "mkone" ""
+detect "mkmany" ""
+detect "mklib" ""
+detect "mksyslib" ""
+detect "README.md" ""
+detect "x.markdown" ""
+detect "README" ""
+detect "x.C" ""
+detect "notes.txt" "#!/bin/rc\n"
+detect "a.c" "#!/bin/rc\n"
+detect "" ""
+lang bogus
+lang markdown
+lang c
+lang plain

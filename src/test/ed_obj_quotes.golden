@@ -1,0 +1,15 @@
+open 0
+sel NOR [3,6)*
+sel NOR [2,7)*
+sel NOR [3,6)*
+sel NOR [3,6)*
+sel NOR [11,12)*
+sel NOR [10,13)*
+sel NOR [19,20)*
+sel NOR [18,21)*
+sel NOR [23,24)*
+sel NOR [22,25)*
+sel NOR [8,9)*
+msg "no object"
+sel NOR [32,33)*
+msg "no object"

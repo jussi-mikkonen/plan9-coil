@@ -1,0 +1,21 @@
+# Esc and Del interrupt a search: selection and text unchanged
+filerep big.txt 2000 "abcdefghi\n" "zzz"
+open big.txt
+slice 1024
+autowork off
+setsel 3 4
+dump sel
+keys "/zzz<ret>"
+work 2
+dump job
+keys "<esc>"
+dump job
+dump msg
+dump sel
+keys "/zzz<ret>"
+work 2
+keys "<del>"
+dump job
+dump msg
+dump sel
+dump mode

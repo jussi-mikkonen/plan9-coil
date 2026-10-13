@@ -1,0 +1,22 @@
+# too many changes or too much growth: a clear message, nothing applied
+file a.txt "aaaaa\n"
+open a.txt
+maxedits 3
+keys ":%x/a/ d<ret>"
+dump msg
+dump text
+keys "u"
+dump msg
+keys ":%s/a/b/g<ret>"
+dump msg
+dump text
+maxedits 50
+bufmax 8
+keys ":%x/a/ c/aaaaaaaaaa/<ret>"
+dump msg
+dump text
+keys ":%s/a/bbbbbbbbbb/g<ret>"
+dump msg
+dump text
+keys "u"
+dump msg

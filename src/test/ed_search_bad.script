@@ -1,0 +1,18 @@
+# a bad pattern shows "bad regexp:", changes neither mode nor selection, and coil keeps running
+file b.txt "xa(x\nplain x\n"
+open b.txt
+keys "l"
+dump sel
+keys "/a(<ret>"
+dump msg
+dump mode
+dump sel
+dump search
+keys "/*a<ret>"
+dump msg
+keys "/[ab<ret>"
+dump msg
+keys "/plain<ret>"
+dump msg
+dump sel
+dump search

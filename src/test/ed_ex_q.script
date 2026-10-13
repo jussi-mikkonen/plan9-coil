@@ -1,0 +1,14 @@
+file q.c "x\n"
+open q.c
+keys ":q<ret>"
+dump quit
+open q.c
+keys "ix<esc>"
+keys ":q<ret>"
+dump quit
+dump msg
+keys ":q foo<ret>"
+dump quit
+dump msg
+keys ":q!<ret>"
+dump quit

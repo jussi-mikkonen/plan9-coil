@@ -1,0 +1,17 @@
+# :num toggles the line-number gutter; digits right-aligned, Slinenr style 0
+size 6 20
+gutter 0
+file a.c "one\ntwo\nthree\n"
+open a.c
+keys ":num\n"
+dump msg
+dump screen
+keys ":num\n"
+dump msg
+dump screen
+keys ":num on\n"
+dump msg
+keys ":num off\n"
+dump msg
+keys ":num x\n"
+dump msg

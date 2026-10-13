@@ -1,0 +1,6 @@
+file a.c "int x;\n"
+perm a.c 0640
+open a.c
+keys "ix<esc>"
+keys ":w<ret>"
+dump hoststamp a.c

@@ -1,0 +1,9 @@
+# typing /* recolours the following rows; undo restores them
+size 8 20
+file y.c "int a;\nint b;\nint c;\nint d;\nint e;\n"
+open y.c
+dump screen
+keys "jji/*<esc>"
+dump screen
+keys "u"
+dump screen

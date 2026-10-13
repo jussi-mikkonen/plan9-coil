@@ -1,0 +1,4 @@
+open 0
+msg "log.txt: append-only file, not written"
+msg "log.txt: append-only file, not written"
+host log.txt "old\n"

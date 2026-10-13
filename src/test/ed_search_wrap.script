@@ -1,0 +1,19 @@
+# n wraps from the last match to the first with "search wrapped"; a missing word leaves the selection alone
+file w.txt "one two one\nthree one\n"
+open w.txt
+keys "/one<ret>"
+dump sel
+keys "n"
+dump sel
+keys "n"
+dump sel
+dump msg
+keys "n"
+dump sel
+dump msg
+keys "/zzz<ret>"
+dump sel
+dump msg
+keys "/two<ret>"
+dump sel
+dump msg

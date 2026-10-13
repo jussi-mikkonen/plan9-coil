@@ -1,0 +1,23 @@
+# N reverses the last direction, n repeats it; no pattern -> message
+file d.txt "foo a foo b foo\nfoo\n"
+open d.txt
+keys "N"
+dump msg
+keys "n"
+dump msg
+keys "/foo<ret>"
+dump sel
+keys "n"
+dump sel
+keys "N"
+dump sel
+keys "n"
+dump sel
+keys "?foo<ret>"
+dump sel
+keys "n"
+dump sel
+keys "N"
+dump sel
+dump search
+open 0

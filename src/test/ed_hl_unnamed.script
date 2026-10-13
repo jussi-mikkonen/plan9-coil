@@ -1,0 +1,6 @@
+# an unnamed buffer saved with :w n.c becomes C
+size 6 30
+keys "iint a;<esc>"
+dump screen
+keys ":w n.c<ret>"
+dump screen

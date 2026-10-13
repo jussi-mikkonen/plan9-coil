@@ -1,0 +1,9 @@
+# d removes every match; carets (one-rune cursors) stay at the deletion points
+file a.txt "foo boo\n"
+open a.txt
+keys ":%x/o/ d<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+dump text

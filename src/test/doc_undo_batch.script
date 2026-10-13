@@ -1,0 +1,8 @@
+load "one two three\n"
+sel 0 3 4 7 8 13
+batch 0 3 "1" 4 3 "2" 8 5 "3"
+dump
+undo
+dump
+redo
+dump

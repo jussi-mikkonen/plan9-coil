@@ -1,0 +1,5 @@
+open 0
+msg "no /dev/snarf; using coil's register"
+snarf absent puts 1 gets 1
+msg ""
+text "foo foo bar\n"

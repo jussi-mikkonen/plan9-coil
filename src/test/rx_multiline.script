@@ -1,0 +1,8 @@
+# a pattern with \n (translated) matches across a line end, also at a window cut
+text "foo;\n}\nbar;\n}\n"
+find ";\\n}"
+win 8
+find ";\\n}"
+win 5
+find ";\\n}"
+find "\\n"

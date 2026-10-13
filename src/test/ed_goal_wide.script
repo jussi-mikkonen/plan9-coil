@@ -1,0 +1,23 @@
+width eaw
+file w.txt "abcd\n\xe4\xb8\xad\xe6\x96\x87x\nabcd\n"
+open w.txt
+keys "l"
+dump sel
+keys "j"
+dump sel
+keys "k"
+dump sel
+keys "l"
+dump sel
+keys "j"
+dump sel
+keys "j"
+dump sel
+keys "k"
+dump sel
+keys "l"
+dump sel
+keys "k"
+dump sel
+keys "j"
+dump sel

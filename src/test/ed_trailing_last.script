@@ -1,0 +1,5 @@
+# the last line of a plain buffer without a final newline still flags its trailing blanks
+size 4 20
+file t.txt "ab  \ncd  "
+open t.txt
+dump screen

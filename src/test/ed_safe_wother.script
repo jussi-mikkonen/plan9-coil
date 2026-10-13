@@ -1,0 +1,12 @@
+file log.txt "old\n"
+fmode log.txt append
+file a.c "int x;\n"
+open a.c
+keys "ix<esc>"
+keys ":w! log.txt<ret>"
+dump msg
+dump host log.txt
+keys ":w b.c<ret>"
+dump msg
+dump host b.c
+dump status

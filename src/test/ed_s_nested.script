@@ -1,0 +1,13 @@
+# s after x and g; ^ inside a dot is a real line start
+file a.txt "foo bar fox\n"
+file b.txt "foo far\nfoo\n"
+open a.txt
+keys ":%x/[a-z]+/ g/o/ s/o/0/<ret>"
+dump text
+dump sel
+dump msg
+open b.txt
+keys ":%x/[a-z]+/ g/^f/ c/X/<ret>"
+dump text
+dump sel
+dump msg

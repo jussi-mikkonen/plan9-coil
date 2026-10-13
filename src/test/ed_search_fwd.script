@@ -1,0 +1,18 @@
+# /pattern<ret> selects the next match after the selection; n the following one; Select mode keeps the anchor
+file s.txt "foo a foo b foo\nfoo\n"
+open s.txt
+keys "/foo<ret>"
+dump sel
+dump msg
+keys "n"
+dump sel
+keys "n"
+dump sel
+dump search
+keys "gg"
+keys "v"
+keys "/foo<ret>"
+dump sel
+dump mode
+keys "n"
+dump sel

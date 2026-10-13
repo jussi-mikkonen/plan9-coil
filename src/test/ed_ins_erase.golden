@@ -1,0 +1,30 @@
+open 0
+text "abd\nef\n"
+sel INS [2,2)*
+text "ad\nef\n"
+sel INS [1,1)*
+open 0
+text "abcdef\n"
+sel INS [4,4)*
+open 0
+text "abcd"
+sel INS [2,2)*
+open 0
+text "x \n"
+sel INS [2,2)*
+open 0
+text "x->\n"
+text "x\n"
+text "\n"
+sel INS [0,0)*
+open 0
+text "abcd\n"
+sel INS [2,2)*
+open 0
+text "\t\n"
+sel INS [1,1)*
+text "\n"
+sel INS [0,0)*
+open 0
+text "abcd\n"
+sel INS [2,2)*

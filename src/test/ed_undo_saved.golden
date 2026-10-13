@@ -1,0 +1,6 @@
+open 0
+status NOR a.c 1:2  wrote a.c 8
+status NOR a.c [+] 1:3
+status NOR a.c 1:2
+status NOR a.c [+] 1:1
+status NOR a.c 1:2

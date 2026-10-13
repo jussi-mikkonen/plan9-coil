@@ -1,0 +1,15 @@
+# ? at the first match wraps to the last one
+file bw.txt "one two one\nthree one\n"
+open bw.txt
+keys "/one<ret>"
+dump sel
+keys "?one<ret>"
+dump sel
+dump msg
+keys "?one<ret>"
+dump sel
+dump msg
+keys "?zzz<ret>"
+dump sel
+dump msg
+open 0

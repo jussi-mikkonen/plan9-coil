@@ -1,0 +1,11 @@
+snarf rio
+file a.txt "a\0b\xff c\0d\nx y\n"
+open a.txt
+setsel 0 4 5 8
+keys "y"
+dump snarf
+setsel 9 10 11 12
+keys "p"
+dump text
+dump sel
+dump reg

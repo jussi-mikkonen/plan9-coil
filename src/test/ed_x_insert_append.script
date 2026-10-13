@@ -1,0 +1,16 @@
+# i inserts before each match, a after, c with empty text deletes
+file a.txt "abc\nbb\n"
+open a.txt
+keys ":%x/b/ i/[/<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+keys ":%x/b/ a/]/<ret>"
+dump text
+dump sel
+keys "u"
+keys ":%x/b/ c//<ret>"
+dump text
+dump sel
+dump msg

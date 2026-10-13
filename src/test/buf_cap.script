@@ -1,0 +1,8 @@
+# size cap: refuse instead of overflowing
+max 10
+load "abcdefghijk"
+load "abcdefghij"
+ins 0 "x"
+len
+text
+check

@@ -1,0 +1,15 @@
+# progress on a file over 21 MB: done * 100 would overflow an int
+filerep big.txt 2500000 "abcdefghi\n" "zzz"
+open big.txt
+slice 3600000
+autowork off
+keys "/zzz<ret>"
+dump job
+dump msg
+work 2
+dump job
+dump msg
+work
+dump job
+dump msg
+dump sel

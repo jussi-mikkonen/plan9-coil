@@ -1,0 +1,15 @@
+open 0
+sel NOR [4,5)*
+open 0
+sel NOR [0,1)*
+status NOR x:3 1:1
+open 0
+sel NOR [6,7)*
+open 0
+sel NOR [6,7)*
+open 0
+sel NOR [0,1)*
+open 0
+status NOR b.c: [new] 1:1  new file
+open 0
+status NOR nofile [new] 1:1  new file

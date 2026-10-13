@@ -1,0 +1,22 @@
+text abYcX|
+sel [0,1)*
+modified 1
+hist cur 2 n 2 saved 0
+text abcX|
+sel [0,1)*
+modified 1
+hist cur 1 n 2 saved 0
+text abc|
+sel [0,1)*
+modified 0
+hist cur 0 n 2 saved 0
+text abcX|
+sel [0,1)*
+modified 1
+hist cur 1 n 2 saved 0
+error nothing to undo
+error nothing to undo
+text abc|
+sel [0,1)*
+modified 0
+hist cur 0 n 2 saved 0

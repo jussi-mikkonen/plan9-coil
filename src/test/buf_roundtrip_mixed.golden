@@ -1,0 +1,5 @@
+len 17
+lines 3
+text "a\x00b\xff\xc3\r\nx\xed\xa0\x80\r\nlast"
+roundtrip SAME 17
+check ok

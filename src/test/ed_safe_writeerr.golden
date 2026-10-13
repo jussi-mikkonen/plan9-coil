@@ -1,0 +1,10 @@
+open 0
+msg "a.c: write: disk full"
+status NOR a.c [+] 1:2  a.c: write: disk full
+host a.c "int x;\n"
+quit 0
+msg "unsaved changes; :q! quits"
+text "int x;\n"
+msg "a.c: permission denied"
+status NOR a.c [+] 1:2  a.c: permission denied
+quit 0

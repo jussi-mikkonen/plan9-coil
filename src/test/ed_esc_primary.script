@@ -1,0 +1,27 @@
+# Esc in Normal mode keeps only the primary selection; Select-mode Esc just leaves Select mode
+file a.txt "foo bar foo\n"
+file b.txt "a 12 b 345 c 6\n"
+open a.txt
+setsel 0 1 4 5 8 9 10 11
+keys "<esc>"
+dump sel
+keys "<esc>"
+dump sel
+keys ":%x/foo/ c/X/<ret>"
+dump sel
+keys "<esc>"
+dump sel
+dump mode
+setsel 0 1 4 5
+keys "v"
+dump mode
+keys "<esc>"
+dump mode
+dump sel
+keys "<esc>"
+dump sel
+open b.txt
+keys ":%x/[0-9]+/<ret>"
+dump sel
+keys "<esc>"
+dump sel

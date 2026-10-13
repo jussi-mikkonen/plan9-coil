@@ -1,0 +1,8 @@
+row 0 0061. 0020. 0020. 0020. 0020. 0020.
+row 1 0062. 005e^ 004d^ 0063. 0020. 0020.
+colof 1 1
+colof 2 1
+colof 4 1
+colof 5 3
+cell2pos 0 5 1
+pos2cell 2 0 1

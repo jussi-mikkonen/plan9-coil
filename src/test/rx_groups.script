@@ -1,0 +1,4 @@
+# group positions; an unset group is not printed
+text "xac abc"
+find "(a)(b)?c"
+find "(a|x)(b|c)"

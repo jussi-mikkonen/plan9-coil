@@ -1,0 +1,7 @@
+open 0
+text "abX\r\ncd\r\n"
+sel NOR [3,5)*
+open 0
+text "ab\r\nXcd\r\n"
+open 0
+text "ab\r\nXcd\r\n"

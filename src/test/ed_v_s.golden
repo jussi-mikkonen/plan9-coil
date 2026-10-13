@@ -1,0 +1,6 @@
+open 0
+text "long a;\n#int b;\nlong c;\n"
+sel NOR [0,4) [16,20)*
+msg "2 changes"
+text "int a;\n#int b;\nint c;\n"
+msg "nothing to undo"

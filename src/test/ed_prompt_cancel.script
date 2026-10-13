@@ -1,0 +1,12 @@
+# Esc cancels without running; Backspace on an empty prompt closes it
+file a.c "x\n"
+open a.c
+keys ":abc<esc>"
+dump prompt
+dump text
+dump msg
+dump quit
+keys ":"
+dump prompt
+keys "<bs>"
+dump prompt

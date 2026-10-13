@@ -1,0 +1,3 @@
+open 0
+text "\tab\n"
+sel INS [1,1)*

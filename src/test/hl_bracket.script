@@ -1,0 +1,40 @@
+# bracket partners: nesting, comments and strings skipped in code, plain text counts everything, bounds
+lang c
+load "f(a[1], (b));"
+bracket 1
+bracket 11
+bracket 3
+bracket 5
+bracket 8
+bracket 10
+bracket 12
+bracket 0
+load "{ /* } */ }"
+bracket 0
+bracket 10
+bracket 5
+load "x = \"(\"; (y)"
+bracket 5
+bracket 9
+bracket 11
+load "(unclosed"
+bracket 0
+load "a)"
+bracket 1
+lang plain
+load "say \"(hi)\" (x)"
+bracket 5
+bracket 8
+bracket 11
+bracket 13
+lang c
+genlines 600 "x" "(\n"
+edit 1202 0 ")"
+bracket 0
+bracket 1202
+genlines 400 "x" "(\n"
+edit 802 0 ")"
+bracket 0
+bracket 802
+genlines 1 "x" "x\n"
+bracket 3

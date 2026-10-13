@@ -1,0 +1,136 @@
+# example 1: l at a line end
+file e1.txt "ab\ncd\n"
+open e1.txt
+keys "l"
+dump sel
+keys "l"
+dump sel
+keys "l"
+dump sel
+# example 2: l at the last rune
+file e2.txt "ab\n"
+open e2.txt
+keys "ll"
+dump sel
+keys "l"
+dump sel
+# example 3: h at 0
+file e3.txt "ab"
+open e3.txt
+keys "h"
+dump sel
+# example 4: w word plus trailing whitespace
+file e4.txt "foo  bar."
+open e4.txt
+keys "w"
+dump sel
+open e4.txt
+keys "5l"
+dump sel
+keys "w"
+dump sel
+# example 5: b
+file e5.txt "foo bar"
+open e5.txt
+keys "4l"
+dump sel
+keys "b"
+dump sel
+# example 6: e
+file e6.txt "foo  bar"
+open e6.txt
+keys "e"
+dump sel
+# example 7: W B E
+file e7.txt "a.b c"
+open e7.txt
+keys "W"
+dump sel
+# example 8: x
+file e8.txt "ab\ncd\n"
+open e8.txt
+keys "l"
+dump sel
+keys "x"
+dump sel
+keys "x"
+dump sel
+# example 9: v then motion extends
+file e9.txt "abcdef"
+open e9.txt
+keys "lv"
+dump sel
+keys "ll"
+dump sel
+# example 10: ; collapse
+open e9.txt
+keys "lvll"
+dump sel
+keys ";"
+dump sel
+# example 11: , flip
+open e9.txt
+keys "lvll"
+dump sel
+keys ","
+dump sel
+# example 12: j with a goal column across a tab
+file e12.txt "a\tb\nxxxxxx\n"
+open e12.txt
+keys "ll"
+dump sel
+keys "j"
+dump sel
+keys "k"
+dump sel
+keys "j"
+dump sel
+# example 13: j onto a wide rune
+width eaw
+file e13.txt "abc\n\xe4\xb8\xad\xe6\x96\x87\n"
+open e13.txt
+keys "ll"
+dump sel
+keys "j"
+dump sel
+width ascii
+# example 14: mi( ma( and %
+file e14.txt "f(a, b)"
+open e14.txt
+keys "3lmi("
+dump sel
+keys "gg3lma("
+dump sel
+keys "gg3l%"
+dump sel
+# example 15: i then Esc
+file e15.txt "int x;"
+open e15.txt
+keys "i"
+dump sel
+keys "ab"
+dump sel
+dump text
+keys "<esc>"
+dump sel
+file e15b.txt ""
+open e15b.txt
+keys "ix"
+dump sel
+keys "<esc>"
+dump sel
+# example 16: Backspace at a line start
+file e16.txt "ab\ncd"
+open e16.txt
+keys "ji"
+dump sel
+keys "<bs>"
+dump sel
+dump text
+file e16c.txt "ab\r\ncd"
+open e16c.txt
+keys "ji"
+dump sel
+keys "<bs>"
+dump sel
+dump text

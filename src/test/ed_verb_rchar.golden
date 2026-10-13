@@ -1,0 +1,11 @@
+open 0
+text "\xc3\xb6\xc3\xb6\n\xc3\xb6\xc3\xb6\xc3\xb6\n"
+sel NOR [0,12)*
+reg 0
+open 0
+text "x\r\nx\r\n"
+sel NOR [0,6)*
+open 0
+text "..."
+sel NOR [0,3)*
+text "a\xffb"

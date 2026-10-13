@@ -1,0 +1,5 @@
+file a.c "ab\n"
+open a.c
+keys "i<tab>"
+dump text
+dump sel

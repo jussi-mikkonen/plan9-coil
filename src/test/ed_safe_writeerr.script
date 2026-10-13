@@ -1,0 +1,21 @@
+file a.c "int x;\n"
+open a.c
+failwrite a.c on
+keys "ix<esc>"
+keys ":w<ret>"
+dump msg
+dump status
+dump host a.c
+keys ":q<ret>"
+dump quit
+dump msg
+keys "u"
+dump text
+failwrite a.c off
+perm a.c 0444
+keys "iy<esc>"
+keys ":w!<ret>"
+dump msg
+dump status
+keys ":wq<ret>"
+dump quit

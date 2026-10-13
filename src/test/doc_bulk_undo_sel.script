@@ -1,0 +1,17 @@
+bulkmin 0
+load "hello world\n"
+sel 6 11
+ins 0 ">>"
+dump
+seal
+del 0 2
+dump
+undo
+dump
+undo
+dump
+sel 0 2
+redo
+dump
+redo
+dump

@@ -1,0 +1,554 @@
+.TH COIL 1
+.SH NAME
+coil \- modal text editor
+.SH SYNOPSIS
+.B coil
+[
+.B -D
+] [
+.B -s
+] [
+.B -f
+.I font
+]
+.I file\fR[\fP\fB:\fP\fIN\fR]\fP
+.PP
+The file argument is required; without it
+.I coil
+prints a usage message and exits.
+.SH DESCRIPTION
+.I Coil
+is a modal text editor in its own
+.IR draw (3)
+window, in the style of Helix and Kakoune: select first, then act on the selection.
+It runs unchanged in
+.IR rio (1),
+in rini and nested.
+There is always at least one selection of at least one rune, and
+the cursor is a selection of one rune.
+Motions move or extend the selections; verbs
+.RB ( d ,
+.BR c ,
+.BR y ,
+.BR p )
+act on them.
+The text is held as bytes: invalid UTF-8 and NUL bytes survive a load and a save unchanged.
+.PP
+The file is opened at once; a name that does not exist starts an empty buffer
+that is created on the first write.
+.I File\fB:\fIN
+opens the file at line
+.IR N .
+The last row of the window is the status line.
+It shows the mode, the file name, a modified mark, the line and column of the cursor,
+the number of selections and the last message.
+.PP
+The options are
+.TF "-f font"
+.TP
+.B -D
+Debug: trace resizes, keys and mouse events to standard error.
+.TP
+.B -s
+Scroll the window with a single draw request when the text moves by a few lines,
+instead of repainting every row.
+.TP
+.BI -f " font
+Use
+.I font
+(fixed width) instead of the default
+.BR /lib/font/bit/vga/unicode.font .
+.PD
+.SS Normal mode
+A number before a key repeats it.
+.TF "mi\fIc\fP, ma\fIc\fP"
+.TP
+.B h j k l
+Move by one rune or line; the arrow keys do the same.
+.TP
+.B w b e
+Move to the next word start (selecting the word and the blanks after it), the previous word start, the word end.
+.TP
+.B W B E
+The same with only blanks as word separators.
+.TP
+.B H L
+Go to the line start or end; Home and End do the same.
+.TP
+.B gg ge
+Go to the start or the end of the file.
+.TP
+.B G
+Go to line
+.I count
+(the last line without a count).
+.TP
+.B ^D ^U
+Half a page down or up.
+.TP
+.B ^F ^B
+A page down or up; PgDn and PgUp do the same.
+.TP
+.B x
+Select the whole line, including its newline; repeated, extend by a line.
+.TP
+.B %
+Select the whole file.
+.TP
+.B ;
+Collapse each selection to its cursor rune.
+.TP
+.B ,
+Flip each selection: swap anchor and head.
+.TP
+.BR mi c ", " ma c
+Select the text inside or around the object
+.IR c :
+.B w W p ( ) b { } B [ ] " ' `
+(word, big word, paragraph, brackets, quotes).
+.TP
+.B v
+Enter Select mode.
+.TP
+.B i a
+Enter Insert mode before or after the selections.
+.TP
+.B I A
+Enter Insert mode at the start or end of the line.
+.TP
+.B o O
+Open a new line below or above and enter Insert mode.
+.TP
+.B d
+Delete the selected text into the snarf buffer.
+.TP
+.B c
+Delete the selected text into the snarf buffer and enter Insert mode.
+.TP
+.B y
+Yank the selections into the snarf buffer.
+.TP
+.B p P
+Paste after or before the selections.
+.TP
+.B R
+Replace the selections with the snarf buffer.
+.TP
+.BI r c
+Replace every rune of the selections by
+.IR c ;
+Esc cancels.
+.TP
+.B u U
+Undo and redo.
+One command, including a multi-selection edit or a structural command, is one step;
+a whole Insert mode session is one step.
+.TP
+.B :
+Open the command line (see
+.BR Commands ).
+.TP
+.B / ? n N *
+Search forward, search backward, repeat in the same or the opposite direction,
+search for the selected text literally.
+.TP
+.B Esc
+Drop all selections except the primary.
+.TP
+.B ^S
+Save the file.
+.TP
+.B ^Q
+Quit; when the buffer is modified, a second press quits and discards the changes.
+.PD
+.SS Select mode
+Entered with
+.BR v .
+The motions above extend the selections instead of moving them: the anchor stays
+and the head follows.
+A search keeps the anchor.
+Every other key of Normal mode works the same,
+and Esc leaves Select mode and keeps the selections.
+.SS Insert mode
+Printable keys, Enter and Tab are typed at every caret.
+.TF "Backspace"
+.TP
+.B Esc
+Return to Normal mode.
+.TP
+.B Backspace
+Delete the rune before each caret.
+.TP
+.B ^W
+Delete the word before each caret.
+.TP
+.B ^U
+Delete back to the start of the line.
+.TP
+.B arrows
+Move the carets; Home, End, PgUp and PgDn too.
+.TP
+.B ^S
+Save the file.
+.PD
+.PP
+Tab inserts a real tab in every language except Markdown, which gets spaces.
+The tab width is 4.
+.SS Command line
+.B :
+in Normal or Select mode, and
+.B /
+and
+.B ?
+for search, open a line in the status row.
+Enter runs it and Esc cancels.
+Backspace erases a rune (on an empty line it closes the prompt),
+^W a word, ^U the whole line.
+Up and Down recall earlier lines; there is a separate history for
+.B :
+and for searches.
+.SS Mouse
+Button 1 clicks to place the cursor and drags to select;
+a double click selects a word.
+The wheel scrolls by three lines.
+A click in the line-number gutter places the cursor at the start of that line.
+.SS Commands
+Paths are literal; there is no shell and no expansion.
+.TF ":w\ file"
+.TP
+.B :w
+Write the file.
+It refuses when the file changed on disk since coil read it
+.RB ( :w!
+overwrites).
+.TP
+.B :w!
+Write even if the file changed on disk.
+.TP
+.BI :w " file
+Write a copy.
+.TP
+.B :q
+Quit; refused when modified.
+.TP
+.B :q!
+Quit and discard changes.
+.TP
+.B :wq
+Write and quit.
+.TP
+.BI :e " file
+Open another file;
+.IB file : N
+jumps to line
+.IR N .
+.TP
+.B :e!
+Reload the file, or with a file name open it discarding changes.
+.TP
+.B :N
+Go to line
+.IR N .
+.TP
+.B ":num\fR [\fPon\fR|\fPoff\fR]\fP"
+Show or hide the line-number gutter (no argument toggles it).
+It is on by default and is not saved; it is hidden in windows too narrow for it.
+.TP
+.B ":lang\fR [\fPc\fR|\fPrc\fR|\fPmkfile\fR|\fPmarkdown\fR|\fPplain\fR]\fP"
+Force the language of the buffer (highlighting and tab setting), or with no argument report it.
+.PD
+.PP
+The language is detected from the file name when the file is opened:
+.B .c .h .y .l
+are C;
+.B .rc
+and files starting with
+.B #!/bin/rc
+or
+.B #!/rc/bin/rc
+are rc;
+.BR mkfile ,
+.BR mkfile.* ,
+.BR *.mk ,
+.BR mkone ,
+.BR mkmany ,
+.B mklib
+and
+.B mksyslib
+are mkfiles;
+.B .md
+is Markdown; anything else is plain.
+Writing an unnamed buffer with
+.B :w
+.I name
+detects the language again from the new name and overrides a forced language.
+.SS Structural commands
+Any other line is a command in the style of
+.IR sam (1),
+which selects first and then acts:
+.IP
+.B x/\fIre\fB/
+.br
+.B y/\fIre\fB/
+.br
+.B g/\fIre\fB/
+.br
+.B v/\fIre\fB/
+.PP
+.B x
+makes each match of the expression in each current selection the new selection;
+.B y
+the text between the matches;
+.B g
+keeps a selection that contains a match and
+.B v
+one that does not.
+Without an expression
+.B x
+and
+.B y
+iterate over lines.
+They chain, and end in one of
+.TF "s/re/text/g"
+.TP
+.B d
+delete the selections
+.TP
+.BI c/ text /
+replace them with
+.I text
+.TP
+.BI i/ text /
+insert before them
+.TP
+.BI a/ text /
+insert after them
+.TP
+.BI s/ re / text /\fR[\fPg\fR]\fP
+substitute the first (or with
+.BR g ,
+every) match; in
+.I text
+.B &
+and
+.B \e0
+are the match and
+.B \e1
+to
+.B \e9
+the groups.
+.PD
+.PP
+The terminals
+.BR d ,
+.BR c ,
+.BR i ,
+.B a
+and
+.B s
+also work alone, on each current selection,
+or on the whole file after a
+.B %
+or
+.B ,
+prefix; for example
+.B :%s/foo/bar/g
+replaces every
+.B foo
+in the file with
+.BR bar .
+.PP
+The starting selections are the current ones, or the whole file after a
+.B %
+or
+.B ,
+prefix.
+For example
+.B :%x/foo/ c/bar/
+replaces every
+.B foo
+and
+.B :%x g/TODO/ d
+deletes the lines holding
+.BR TODO .
+An empty expression
+.RB ( x// )
+reuses the last pattern.
+In text,
+.B \en
+is a newline,
+.B \et
+a tab and
+.B \e/
+the delimiter.
+All edits of a command are made against the original text and applied together:
+the whole command is one undo step, and the new selections cover the changed text.
+A command may make at most 250000 changes;
+beyond 50000 the status row first shows
+.BR "applying N changes..." .
+Esc or Del interrupts a running search or command, leaving the text unchanged.
+Searches and commands run in slices between input events, so the window stays alive.
+.SS Regular expressions
+Patterns are the
+.IR regexp (6)
+dialect of the system library: literals,
+.B .
+.B [...]
+.B [^...]
+.B *
+.B +
+.B ?
+.B |
+.B ( )
+.B ^
+.B $ .
+.B \en
+and
+.B \et
+are translated by coil to a newline and a tab.
+There is no
+.B \ed
+.B \ew
+or
+.BR \es ,
+no
+.BR {n,m} ,
+no non-greedy
+.B *?
+and no
+.BR (?:...) ;
+they do not fail, they match the wrong thing.
+A dot and a negated class never match a newline;
+.B ^
+and
+.B $
+match at every line start and end.
+.SS Highlighting
+C, rc, mkfile and Markdown are highlighted.
+C has keywords, the types of the Plan 9 headers (including
+.BR u8int ,
+.BR u16int ,
+.BR u32int ,
+.BR u64int ,
+.B s8int
+to
+.BR s64int ,
+.B uchar
+and
+.BR schar ),
+strings, characters, numbers, comments and preprocessor lines.
+rc has keywords, variables, quotes, comments and redirections; a mkfile has
+targets, recipes, assignments, variables and conditionals;
+Markdown has headings, emphasis, strong text, code spans and fences, links and list marks.
+The cursor shows the partner of a bracket
+.B ( ) [ ] { }
+under it in the
+.B match
+style when it lies within 500 lines.
+Trailing blanks are drawn in the
+.B trailing
+style (except on the line being typed on).
+.SS Styles
+Colours come from the theme file
+.BR $home/lib/coil/theme ,
+one
+.I name
+.B fg=#rrggbb bg=#rrggbb
+and optionally
+.B underline
+per line, as in
+.IR cell (2).
+Without it a built-in dark theme is used.
+Every style is listed here:
+.TF selection
+.TP
+.B default
+text and background
+.TP
+.B selection
+the overlay mixed over the selected text
+.TP
+.B cursor
+the cursor cell
+.TP
+.B status
+the status row
+.TP
+.B message
+messages in the status row
+.TP
+.B error
+errors
+.TP
+.B ctrl
+control characters
+.TP
+.B invalid
+bytes that are not UTF-8
+.TP
+.B keyword type comment string number preproc
+the C tokens and, where they fit, the other languages
+.TP
+.B variable target recipe
+rc and mkfile variables, mkfile targets, mkfile recipe lines
+.TP
+.B heading emph strong code link listmark
+Markdown (headings and strong text are underlined)
+.TP
+.B match
+the bracket partner
+.TP
+.B trailing
+trailing blanks
+.TP
+.B linenr
+the line-number gutter
+.PD
+.PP
+A light, acme-like theme is in
+.B lib/theme.light
+in the source tree; to use it:
+.IP
+.B cp lib/theme.light $home/lib/coil/theme
+.PP
+The theme is read at startup.
+A bad line shows as
+.B theme:LINE: message
+and the built-in colours stay.
+.SH FILES
+.TF "$home/lib/coil/theme"
+.TP
+.B $home/lib/coil/theme
+optional theme
+.TP
+.B /dev/snarf
+the clipboard, opened afresh for each yank and paste
+.SH SOURCE
+.B src
+in the coil repository.
+.SH "SEE ALSO"
+.IR sam (1),
+.IR acme (1),
+.IR rio (1),
+.IR cell (2),
+.IR regexp (6)
+.SH BUGS
+A hangup (closing the window or the window system exiting) loses unsaved edits; there are no recovery files.
+.PP
+Combining marks are not drawn (no combining marks).
+Fullwidth glyphs (fullwidth forms) are drawn as boxes with the default font.
+Long lines are not wrapped; at most 65536 bytes of a line are shown (Maxline), and a line
+is highlighted only up to its first 4096 bytes.
+.PP
+After a jump far into a file, a comment or fence opened more than 2000 lines earlier is
+not seen until an edit above it.
+A block comment that ends inside a preprocessor line is not recognised.
+.PP
+Not recognised by the highlighter: rc here-documents, mkfile backslash continuation lines,
+and in Markdown setext headings, indented code, reference links, HTML and nested emphasis.
+.PP
+The bracket match looks at most 500 lines (and 64 KiB) from the cursor.
+A single line longer than the 256 KiB search window cannot be matched across the window edge.
+The snarf buffer of
+.IR rio (1)
+holds 100 KiB; larger yanks stay in coil's own register.

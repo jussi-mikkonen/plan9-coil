@@ -1,0 +1,15 @@
+ok x /foo/ c "bar"
+ok whole x /a/ g /b/ d
+ok whole y /,/ i "X"
+ok x
+ok x /re/
+ok v /re/ a "t"
+ok whole x /a/ v /b/ c "t"
+ok x g /foo/ d
+ok x x d
+ok whole
+ok
+ok x /a/
+ok y d
+ok whole x /.*\n/ g /foo/ d
+ok x /a/ x /b/ x /c/ x /d/ x /e/ x /f/ x /g/ x /h/ d

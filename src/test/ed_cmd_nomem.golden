@@ -1,0 +1,9 @@
+open 0
+msg "out of memory"
+sel NOR [0,1)*
+msg "out of memory"
+text "a1\na2\na3\na4\n"
+msg "out of memory"
+text "a1\na2\na3\na4\n"
+msg "3 changes"
+text "X\nX\na3\nX\n"

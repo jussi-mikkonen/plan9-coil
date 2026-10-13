@@ -1,0 +1,15 @@
+# :%x/re/ c/text/ on the whole file, then only inside a selection
+file a.txt "foo bar foo\n"
+open a.txt
+keys ":%x/foo/ c/X/<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+dump text
+dump sel
+setsel 0 3
+keys ":x/foo/ c/X/<ret>"
+dump text
+dump sel
+dump msg

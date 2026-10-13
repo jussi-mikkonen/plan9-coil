@@ -1,0 +1,41 @@
+#!/bin/rc
+# vmcheck.rc: build, test and install libcell, then build and test coil, on the VM.
+# Usage (from the coil repo root on the VM): rc tools/vmcheck.rc [path-to-plan9-libcell]
+# Default libcell path: ../plan9-libcell
+# Output: evidence/vmcheck.txt
+# WARNING: installs libcell into /sys/include, /$objtype/lib and /sys/man/2 (mk install).
+
+coil=`{pwd}
+libcell=../plan9-libcell
+if(! ~ $#* 0)
+	libcell=$1
+mkdir -p evidence
+out=$coil/evidence/vmcheck.txt
+>$out
+
+fn step {
+	echo '--- step '$"*
+	echo '--- step '$"* >>$out
+}
+
+fn run {
+	step $"*
+	{ eval $*; echo status $status } >[2=1] | tee -a $out
+}
+
+step date
+{ date } >[2=1] | tee -a $out
+
+# libcell first: coil links against cellwidth/cellpoint
+run 'cd '$libcell' && mk'
+run 'cd '$libcell' && mk test'
+run 'cd '$libcell' && mk -n install'
+run 'cd '$libcell' && mk install'
+run 'cd '$libcell' && mk lint'
+run 'man 2 cell | grep -n ''cellwidth|cellpoint'''
+
+# coil itself
+run 'cd '$coil'/src && mk'
+run 'cd '$coil'/src && mk test'
+
+echo done, output in $out

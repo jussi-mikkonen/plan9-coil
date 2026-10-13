@@ -1,0 +1,7 @@
+open 0
+text ""
+status NOR new.c [new] 1:1  new file
+msg "new file"
+status NOR new.c [new] [+] 1:2
+host new.c "a"
+status NOR new.c 1:2  wrote new.c 1

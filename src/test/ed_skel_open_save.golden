@@ -1,0 +1,8 @@
+open 0
+text "hello int x;\n"
+sel NOR [6,7)*
+status NOR a.c [+] 1:7
+status NOR a.c 1:7  wrote a.c 13
+msg "wrote a.c 13"
+host a.c "hello int x;\n"
+quit 0

@@ -1,0 +1,14 @@
+open 0
+sel NOR [2,3)*
+status NOR t.txt 1:6
+sel NOR [9,10)*
+sel NOR [15,16)*
+sel NOR [9,10)*
+sel NOR [2,3)*
+sel NOR [1,2)*
+sel NOR [8,9)*
+sel NOR [1,2)*
+open 0
+sel NOR [4,5)*
+sel NOR [7,8)*
+sel NOR [0,1)*

@@ -1,0 +1,10 @@
+# the view follows the cursor down and right, and back
+size 5 10
+file f.c "a\nb\nc\nd\ne\nf\n0123456789abcdefghij\n"
+open f.c
+keys "6j"
+dump screen
+keys "15l"
+dump screen
+keys "15h"
+dump screen

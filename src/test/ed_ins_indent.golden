@@ -1,0 +1,9 @@
+open 0
+text "\tif(x){\n\t\n"
+sel INS [9,9)*
+open 0
+text "    foo\n    \n"
+sel INS [12,12)*
+open 0
+text "\t\n\t\tx\n"
+sel INS [3,3)*

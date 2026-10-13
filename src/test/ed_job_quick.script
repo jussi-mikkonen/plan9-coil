@@ -1,0 +1,8 @@
+# a search that ends in its first slice shows no progress
+file s.txt "one foo two\n"
+open s.txt
+autowork off
+keys "/foo<ret>"
+dump job
+dump msg
+dump sel

@@ -1,0 +1,5 @@
+open 0
+msg "snarf: read or write too large; kept in coil"
+snarf ""
+puts 1 gets 1
+text "abcdefgabcdefg\n"

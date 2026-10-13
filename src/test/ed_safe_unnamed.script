@@ -1,0 +1,22 @@
+# :w PATH on an unnamed buffer: copy rules until a write succeeds, then the name is taken
+file old.txt "old\n"
+keys "ihello<esc>"
+dump status
+keys ":w old.txt<ret>"
+dump msg
+dump status
+dump host old.txt
+failwrite old.txt on
+keys ":w! old.txt<ret>"
+dump msg
+dump status
+dump host old.txt
+failwrite old.txt off
+keys ":w new.txt<ret>"
+dump msg
+dump status
+dump host new.txt
+keys "ix<esc>"
+keys ":w<ret>"
+dump msg
+dump host new.txt

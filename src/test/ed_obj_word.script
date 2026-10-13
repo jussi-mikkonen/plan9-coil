@@ -1,0 +1,20 @@
+file w.txt "foo bar_baz  qux.\n"
+open w.txt
+keys "5lmiw"
+dump sel
+keys "gg5lmaw"
+dump sel
+keys "gg3lmiw"
+dump sel
+keys "gg3lmaw"
+dump sel
+keys "gg15lmaw"
+dump sel
+keys "gg16lmiw"
+dump sel
+keys "gg15lmiW"
+dump sel
+keys "gg15lmaW"
+dump sel
+keys "gg17lmiw"
+dump sel

@@ -1,0 +1,9 @@
+text "01234abc567XY89"
+pieces 5 maxlen 5
+text "01289"
+len 5
+pieces 2 maxlen 3
+text "01234abc567XY89"
+len 15
+pieces 6 maxlen 3
+check ok

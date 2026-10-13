@@ -1,0 +1,6 @@
+# wide runes take two cells; at the last column a wide rune becomes a space
+size 3 6
+width eaw
+load "ab\xe4\xb8\xad\xe4\xb8\xadc\nabcde\xe4\xb8\xad\n"
+row 0
+row 1

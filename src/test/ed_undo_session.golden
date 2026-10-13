@@ -1,0 +1,10 @@
+open 0
+text "hello\nworldint x;\n"
+sel NOR [11,12)*
+text "int x;\n"
+sel NOR [0,1)*
+status NOR a.c 1:1
+text "hello\nworldint x;\n"
+sel NOR [11,12)*
+status NOR a.c [+] 2:6
+msg "nothing to undo"

@@ -1,0 +1,17 @@
+open 0
+sel NOR [0,3)* [4,7) [8,13)
+text "  \n"
+sel NOR [0,1)* [1,2) [2,3)
+reg 3
+r "one"
+r "two"
+r "three"
+text "one two three\n"
+sel NOR [0,3)* [4,7) [8,13)
+text "oneone twotwo threethree\n"
+sel NOR [3,6)* [10,13) [19,24)
+text "one two three\n"
+text "Xone Xtwo Xthree\n"
+sel NOR [1,2)* [6,7) [11,12)
+text "one two three\n"
+sel NOR [0,3)* [4,7) [8,13)

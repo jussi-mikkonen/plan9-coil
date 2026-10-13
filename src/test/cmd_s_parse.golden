@@ -1,0 +1,13 @@
+ok s /a/ "b"
+ok s /a/ "b" g
+ok x /foo/ s /o/ "0" g
+ok s /a/ "b"
+error s: counts are not supported
+error missing replacement for s
+ok whole s /(a)(b)/ "\\2\\1&" g
+ok s /a/b/ "c/d"
+error missing pattern for s
+error unexpected text after s
+ok s /a/ ""
+ok s // "b"
+ok s /a/ "b" g

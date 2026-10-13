@@ -1,0 +1,13 @@
+len 240000
+lines 3001
+pieces 4 maxlen 65520
+linestart 0 0
+linestart 1 80
+linestart 2999 239920
+linestart 3000 240000
+line 0 0
+line 79 0
+line 80 1
+line 239999 2999
+check ok
+roundtrip SAME 240000

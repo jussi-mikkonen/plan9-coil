@@ -1,0 +1,24 @@
+file a.txt "foo bar baz\n"
+open a.txt
+keys "wd"
+dump text
+dump sel
+dump reg
+file b.txt "ab\ncd\nef\n"
+open b.txt
+keys "jxd"
+dump text
+dump sel
+dump reg
+file c.txt "ab"
+open c.txt
+keys "ld"
+dump text
+dump sel
+dump reg
+file e.txt ""
+open e.txt
+keys "d"
+dump text
+dump sel
+dump reg

@@ -1,0 +1,8 @@
+# a window too narrow for the gutter shows none; widening brings it back
+size 4 3
+file n.txt "a\nb\nc\nd\n"
+open n.txt
+gutter 1
+dump screen
+resize 4 20
+dump screen

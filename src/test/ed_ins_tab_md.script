@@ -1,0 +1,8 @@
+file a.md "ab\n"
+open a.md
+keys "la<tab>"
+dump text
+dump sel
+keys "<tab>"
+dump text
+dump sel

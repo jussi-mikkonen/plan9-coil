@@ -1,0 +1,19 @@
+# * searches for the selection literally; on a one-rune cursor it takes the word first
+file st.txt "x foo a.b axb a.b foo\n"
+open st.txt
+setsel 3 4
+keys "*"
+dump sel
+dump search
+setsel 6 9
+keys "*"
+dump sel
+dump search
+keys "n"
+dump sel
+dump msg
+setsel 1 2
+keys "*"
+dump sel
+dump search
+open 0

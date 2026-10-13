@@ -1,0 +1,8 @@
+lang rc tab 4 tabs
+l 00 echo 'a
+s 00 .....ss
+l 01 b' $x
+s 01 ss.vv
+l 02 exit
+s 02 kkkk
+check ok

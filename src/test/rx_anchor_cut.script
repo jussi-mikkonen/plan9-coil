@@ -1,0 +1,20 @@
+# ^ and $ are decided by the real neighbours, not by where a scan window ends
+# foo never straddles a cut of win 8 here; "h$" at a cut must not match
+text "foo bar baz qux foo\nfoo\nxx foo\nxxxxxxxxh!\nxxxxxxxxh\n"
+win 1048576
+find "^foo"
+find "foo$"
+find "h$"
+win 8
+find "^foo"
+find "foo$"
+find "h$"
+win 9
+find "h$"
+# h ends the text of the first window of win 8: no $ at a cut that is not a line end
+text "xxxxxxxhyy\nxxxxxxxh\n"
+win 1048576
+find "h$"
+win 8
+find "h$"
+find "^x"

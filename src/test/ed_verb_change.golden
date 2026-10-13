@@ -1,0 +1,10 @@
+open 0
+mode INS
+text " x;\nint y;\n"
+text "foo x;\nint y;\n"
+sel NOR [3,4)*
+mode NOR
+reg 1
+r "int"
+text "int x;\nint y;\n"
+sel NOR [0,3)*

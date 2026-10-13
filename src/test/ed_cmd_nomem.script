@@ -1,0 +1,19 @@
+# a scan window that cannot be allocated is "out of memory", never "no match" or a partial edit
+file f.txt "a1\na2\na3\na4\n"
+open f.txt
+rxfail 0
+keys "/a3<ret>"
+dump msg
+dump sel
+rxfail 3
+keys ":%x/a./ g/./ c/X/<ret>"
+dump msg
+dump text
+rxfail 2
+keys ":%x/a./ v/3/ c/X/<ret>"
+dump msg
+dump text
+rxfail off
+keys ":%x/a./ v/3/ c/X/<ret>"
+dump msg
+dump text

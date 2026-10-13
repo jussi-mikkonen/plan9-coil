@@ -1,0 +1,4 @@
+bigfile huge.c
+dump status
+open huge.c
+dump status

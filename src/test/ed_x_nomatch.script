@@ -1,0 +1,18 @@
+# no match: nothing changes, no transaction, a message
+file a.txt "abc\n"
+open a.txt
+keys ":%x/zzz/ d<ret>"
+dump msg
+dump sel
+dump text
+keys "u"
+dump msg
+keys ":x/zzz/<ret>"
+dump msg
+keys ":g/zzz/ d<ret>"
+dump msg
+keys ":p<ret>"
+dump msg
+keys ":g d<ret>"
+dump msg
+dump text

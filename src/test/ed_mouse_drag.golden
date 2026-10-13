@@ -1,0 +1,6 @@
+open 0
+sel NOR [2,13)*
+sel NOR [2,5)*
+sel NOR [3,0)*
+sel NOR [3,0)*
+text "def\nghijkl\n"

@@ -1,0 +1,11 @@
+open 0
+snarf "w1\nw2\nw3"
+puts 1 gets 1
+text "w1 w2 w3\nxw1 yw2 zw3\n"
+sel NOR [10,12)* [14,16) [18,20)
+reg 3
+r "w1"
+r "w2"
+r "w3"
+snarf "w1\nw2\nw3"
+puts 1 gets 2

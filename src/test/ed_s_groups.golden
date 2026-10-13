@@ -1,0 +1,9 @@
+open 0
+text "baab baab\n"
+sel NOR [0,4) [5,9)*
+msg "2 changes"
+open 0
+text "[&x]y\n"
+sel NOR [0,4)*
+text "[&x]\n\t\n"
+sel NOR [4,6)*

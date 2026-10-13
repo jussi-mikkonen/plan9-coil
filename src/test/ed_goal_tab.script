@@ -1,0 +1,26 @@
+file t.txt "\tab\nabcdefgh\nxy\n"
+open t.txt
+keys "ll"
+dump sel
+dump status
+keys "j"
+dump sel
+keys "j"
+dump sel
+keys "k"
+dump sel
+keys "k"
+dump sel
+keys "h"
+dump sel
+keys "j"
+dump sel
+keys "k"
+dump sel
+open t.txt
+keys "j"
+dump sel
+keys "lll"
+dump sel
+keys "k"
+dump sel

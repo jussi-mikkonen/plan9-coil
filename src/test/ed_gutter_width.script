@@ -1,0 +1,10 @@
+# the gutter widens at 9->10 and 99->100 lines and follows undo
+size 6 20
+file a.txt "1\n2\n3\n4\n5\n6\n7\n8\n9\n"
+open a.txt
+gutter 1
+dump screen
+keys "Go<esc>"
+dump screen
+keys "u"
+dump screen

@@ -1,0 +1,18 @@
+# horizontal scroll and goal column with the gutter equal those without it
+size 6 20
+file h.txt "0123456789012345678901234567890123456789012345678901234567890\nshort\n0123456789012345678901234567890123456789012345678901234567890\n"
+open h.txt
+gutter 1
+keys "40l"
+dump screen
+keys "jk"
+dump sel
+keys "j"
+dump sel
+keys "j"
+dump sel
+gutter 0
+keys "gg40l"
+dump screen
+keys "jkjj"
+dump sel

@@ -1,0 +1,16 @@
+# ?pattern<ret> selects the nearest match starting before the selection; n continues backwards; Select mode keeps the anchor
+file b.txt "foo a foo b foo\nfoo\n"
+open b.txt
+keys "G"
+dump sel
+keys "?foo<ret>"
+dump sel
+keys "n"
+dump sel
+keys "n"
+dump sel
+dump search
+keys "n"
+dump sel
+dump msg
+open 0

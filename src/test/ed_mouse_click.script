@@ -1,0 +1,21 @@
+# button 1 click places the cursor; past the line end it lands on the last rune; the status row is ignored
+size 6 20
+file m.c "abc def\nxy\n\nlast line\n"
+open m.c
+click 0 4
+dump sel
+click 0 30
+dump sel
+click 5 0
+dump sel
+click 3 0
+dump sel
+keys "iQ"
+click 0 1
+dump sel
+keys "Z<esc>"
+dump text
+keys "u"
+dump text
+click 2 0
+dump sel

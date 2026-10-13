@@ -1,0 +1,7 @@
+open 0
+msg "wrote a.c 8"
+msg "wrote a.c 9"
+text "new\n"
+msg "wrote a.c 5"
+host a.c "znew\n"
+stamp file app 0 vers 5 mtime 1008 len 5

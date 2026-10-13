@@ -1,0 +1,13 @@
+open new.c
+keys "ix<esc>"
+extmod new.c "x\n"
+keys ":w<ret>"
+dump msg
+dump host new.c
+file a.c "int x;\n"
+open a.c
+extdel a.c
+keys "ix<esc>"
+keys ":w<ret>"
+dump msg
+dump host a.c

@@ -1,0 +1,16 @@
+# drag selects from the click rune to the rune under the pointer, in either direction; release ends it
+size 6 20
+file m.c "abcdef\nghijkl\n"
+open m.c
+click 0 2
+drag 1 5
+dump sel
+drag 0 4
+dump sel
+drag 0 0
+dump sel
+release
+drag 1 3
+dump sel
+keys "d"
+dump text

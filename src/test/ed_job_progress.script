@@ -1,0 +1,15 @@
+# a search in slices: progress in the job and the status message, then the match
+filerep big.txt 2000 "abcdefghi\n" "zzz"
+open big.txt
+slice 1024
+autowork off
+keys "/zzz<ret>"
+dump job
+dump msg
+work 3
+dump job
+dump msg
+work
+dump job
+dump msg
+dump sel

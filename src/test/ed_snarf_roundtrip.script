@@ -1,0 +1,8 @@
+file a.txt "foo bar\n"
+open a.txt
+keys "wy"
+dump snarf
+keys "p"
+dump text
+dump reg
+dump snarf

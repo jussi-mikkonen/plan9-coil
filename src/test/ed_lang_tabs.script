@@ -1,0 +1,18 @@
+# tab settings follow a forced language
+size 6 40
+file x.md "\n"
+open x.md
+keys "i<tab><esc>"
+dump text
+keys ":lang c<ret>"
+keys "u"
+keys "i<tab><esc>"
+dump text
+keys ":lang mkfile<ret>"
+keys "u"
+keys "i<tab><esc>"
+dump text
+keys ":lang markdown<ret>"
+keys "u"
+keys "i<tab><esc>"
+dump text

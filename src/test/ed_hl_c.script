@@ -1,0 +1,5 @@
+# a .c file opens highlighted: preproc, keyword, type, number, multi-line comment, string
+size 8 40
+file x.c "#include <u.h>\nstatic int n = 42; /* a\nb */\nchar *s = \"hi\";\n"
+open x.c
+dump screen

@@ -1,0 +1,13 @@
+apply ok modified 1
+text XYab-f|
+sel [3,4)* [4,5)
+check ok
+error bad edit batch
+text XYab-f|
+error bad edit batch
+text XYab-f|
+error buffer full
+text XYab-f|
+apply ok modified 1
+text XYab-f!|
+sel [3,4)* [4,5)

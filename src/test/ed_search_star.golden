@@ -1,0 +1,10 @@
+open 0
+sel NOR [18,21)*
+search "foo" dir 1
+sel NOR [14,17)*
+search "a.b" dir 1
+sel NOR [6,9)*
+msg "search wrapped"
+sel NOR [5,6)*
+search " " dir 1
+open 0

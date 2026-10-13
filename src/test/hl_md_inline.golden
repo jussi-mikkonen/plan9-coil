@@ -1,0 +1,79 @@
+lang markdown tab 4 spaces
+l # Title
+s HHHHHHH
+st 0
+l ####### seven
+s .............
+st 0
+l   ## two
+s HHHHHHHH
+st 0
+l #nospace
+s ........
+st 0
+l a *em* b
+s ..eeee..
+st 0
+l snake_case_name
+s ...............
+st 0
+l a * b * c
+s .........
+st 0
+l **bold** and __b__
+s SSSSSSSS.....SSSSS
+st 0
+l _em_ and *x*
+s eeee.....eee
+st 0
+l use `x()` here
+s ....CCCCC.....
+st 0
+l ``a ` b``
+s CCCCCCCCC
+st 0
+l `open
+s .....
+st 0
+l [coil](http://x)
+s llllllllllllllll
+st 0
+l [no](paren
+s ..........
+st 0
+l <http://9front.org>
+s lllllllllllllllllll
+st 0
+l <b>not</b>
+s ..........
+st 0
+l - item
+s m.....
+st 0
+l * item
+s m.....
+st 0
+l 12. item
+s mmm.....
+st 0
+l 3) item
+s mm.....
+st 0
+l > quote
+s m......
+st 0
+l -no
+s ...
+st 0
+l   - *x* `y`
+s ..m.eee.CCC
+st 0
+l \\*not em\\*
+s ..........
+st 0
+l a\xff\x00 *b\xff*
+s ....eeee
+st 0
+l 
+s 
+st 0

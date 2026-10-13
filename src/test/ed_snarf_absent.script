@@ -1,0 +1,10 @@
+snarf absent
+file a.txt "foo bar\n"
+open a.txt
+keys "wy"
+dump msg
+dump snarf
+keys "y"
+dump msg
+keys "p"
+dump text

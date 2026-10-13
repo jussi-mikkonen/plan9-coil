@@ -1,0 +1,11 @@
+open 0
+sel NOR [8,11)*
+sel NOR [18,21)*
+sel NOR [0,3)*
+msg "search wrapped"
+sel NOR [8,11)*
+msg ""
+sel NOR [8,11)*
+msg "no match: zzz"
+sel NOR [4,7)*
+msg "search wrapped"

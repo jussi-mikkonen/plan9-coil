@@ -1,0 +1,12 @@
+ok c "a\nb"
+ok c "a\tb"
+ok c "a/b"
+ok c "a\\b"
+ok c "a\\qb"
+ok c "abc"
+ok c "abc"
+ok c ""
+ok c "x"
+error unexpected text after c
+ok a "1|2"
+ok i "\\"

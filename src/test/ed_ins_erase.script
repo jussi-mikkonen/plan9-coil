@@ -1,0 +1,48 @@
+file a.txt "abcd\nef\n"
+open a.txt
+keys "lla<bs>"
+dump text
+dump sel
+keys "<c-h>"
+dump text
+dump sel
+open a.txt
+keys "ji<bs>"
+dump text
+dump sel
+file b.txt "ab\r\ncd"
+open b.txt
+keys "ji<bs>"
+dump text
+dump sel
+file c.txt "x foo_bar  \n"
+open c.txt
+keys "A<c-w>"
+dump text
+dump sel
+file d.txt "x->y\n"
+open d.txt
+keys "A<c-w>"
+dump text
+keys "<c-w>"
+dump text
+keys "<c-w><c-w><c-w>"
+dump text
+dump sel
+file e.txt "ab\ncd\n"
+open e.txt
+keys "ji<c-w>"
+dump text
+dump sel
+file f.txt "\tfoo bar\n"
+open f.txt
+keys "A<c-u>"
+dump text
+dump sel
+keys "<c-u>"
+dump text
+dump sel
+open e.txt
+keys "ji<c-u>"
+dump text
+dump sel

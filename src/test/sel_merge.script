@@ -1,0 +1,35 @@
+load "0123456789abcdef\n"
+sel 0 5 3 8
+norm
+dump
+sel 0 3 3 6
+norm
+dump
+sel 4 4 2 4
+norm
+dump
+sel 9 5 1 2
+norm
+dump
+sel 7 2 5 3
+norm
+dump
+sel 0 2 4 6 8 10
+primary 2
+dump
+sel 0 2 4 6
+primary 1
+dump
+sel 6 8 6 8
+norm
+dump
+sel 3 3 3 3 5 5
+norm
+dump
+check
+sel 4 6 2 3
+check
+sel 2 6 4 8
+check
+sel 2 99
+check

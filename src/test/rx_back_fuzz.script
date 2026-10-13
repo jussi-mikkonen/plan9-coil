@@ -1,0 +1,5 @@
+# backward scan == brute-force oracle (anchored regexec at every start), windows 8/16/64
+rfuzz 1 200
+rfuzz 2 200
+rfuzz 3 200
+rfuzz 4 200

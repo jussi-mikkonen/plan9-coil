@@ -1,0 +1,62 @@
+open 0
+sel NOR [1,2)*
+sel NOR [2,3)*
+sel NOR [3,4)*
+open 0
+sel NOR [2,3)*
+sel NOR [2,3)*
+open 0
+sel NOR [0,1)*
+open 0
+sel NOR [0,5)*
+open 0
+sel NOR [5,6)*
+sel NOR [5,8)*
+open 0
+sel NOR [4,5)*
+sel NOR [4,0)*
+open 0
+sel NOR [0,3)*
+open 0
+sel NOR [0,4)*
+open 0
+sel NOR [1,2)*
+sel NOR [0,3)*
+sel NOR [0,6)*
+open 0
+sel SEL [1,2)*
+sel SEL [1,4)*
+open 0
+sel SEL [1,4)*
+sel SEL [3,4)*
+open 0
+sel SEL [1,4)*
+sel SEL [4,1)*
+open 0
+sel NOR [2,3)*
+sel NOR [8,9)*
+sel NOR [2,3)*
+sel NOR [8,9)*
+open 0
+sel NOR [2,3)*
+sel NOR [7,10)*
+open 0
+sel NOR [2,6)*
+sel NOR [1,7)*
+sel NOR [0,7)*
+open 0
+sel INS [0,0)*
+sel INS [2,2)*
+text "abint x;"
+sel NOR [2,3)*
+open 0
+sel INS [1,1)*
+sel NOR [1,1)*
+open 0
+sel INS [3,3)*
+sel INS [2,2)*
+text "abcd"
+open 0
+sel INS [4,4)*
+sel INS [2,2)*
+text "abcd"

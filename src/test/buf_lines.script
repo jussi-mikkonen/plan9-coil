@@ -1,0 +1,15 @@
+# 3000 lines of 80 bytes: line index without a per-file table
+gen lines 3000 80
+len
+lines
+pieces
+linestart 0
+linestart 1
+linestart 2999
+linestart 3000
+line 0
+line 79
+line 80
+line 239999
+check
+roundtrip

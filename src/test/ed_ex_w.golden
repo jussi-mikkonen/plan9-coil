@@ -1,0 +1,12 @@
+open 0
+host a.c "xint x;\n"
+status NOR a.c 1:2  wrote a.c 8
+msg "wrote a.c 8"
+host b.c "xyint x;\n"
+status NOR a.c [+] 1:3  wrote b.c 9
+msg "wrote b.c 9"
+host b.c "xyint x;\n"
+msg "b.c exists; :w! b.c overwrites"
+host b.c "xyzint x;\n"
+msg "wrote b.c 10"
+status NOR a.c [+] 1:4  wrote b.c 10

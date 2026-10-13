@@ -1,0 +1,15 @@
+# \n and \t in a pattern match a newline and a tab; \\n matches a backslash followed by n
+file n.txt "if(x){\n  y;\n}\nz;\n\tq\na\\nb\n"
+open n.txt
+keys "/;\\n}<ret>"
+dump sel
+keys "gg"
+keys "/\\tq<ret>"
+dump sel
+keys "gg"
+keys "/a\\\\nb<ret>"
+dump sel
+dump msg
+keys "gg"
+keys "/y;<ret>"
+dump sel

@@ -1,0 +1,9 @@
+file d ""
+fmode d dir
+open d
+file a.c "int x;\n"
+open a.c
+keys "ix<esc>"
+fmode a.c dir
+keys ":w!<ret>"
+dump msg

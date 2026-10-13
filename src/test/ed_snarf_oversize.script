@@ -1,0 +1,10 @@
+filerep big.txt 1100 "012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678\n"
+open big.txt
+keys "%y"
+dump msg
+dump snarf
+keys "ggp"
+dump sel
+snarf set "new"
+keys "p"
+dump sel

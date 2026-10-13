@@ -1,0 +1,5 @@
+open 0
+text "from samab from samcd from samef\n"
+sel NOR [0,8)* [11,19) [22,30)
+reg 1
+r "from sam"

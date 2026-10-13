@@ -1,0 +1,13 @@
+# rc line lexer: keywords at command position, comments, quotes, variables
+lang rc
+lex "if(~ $#* 0) echo usage"
+lex "for(i in $list) echo $i"
+lex "echo cd if"
+lex "x=1; cd /tmp"
+lex "fn foo { switch($1){ case a; break } }"
+lex "echo 'it''s' # c"
+lex "#!/bin/rc"
+lex "if not echo no"
+lex "echo $\"x ${y} $z(1) $"
+lex "a\xff\x00 'b\xff"
+lex ""

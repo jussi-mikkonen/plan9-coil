@@ -1,0 +1,10 @@
+# reveal: vertical both ways, then horizontal with a 4-cell margin
+size 3 10
+load "a\nb\nc\nd\ne\n0123456789abcdefghijklmnopqrstuvwxyz\n"
+top 0
+reveal 8
+reveal 0
+reveal 30
+reveal 26
+reveal 10
+reveal 45

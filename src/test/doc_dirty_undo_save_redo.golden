@@ -1,0 +1,12 @@
+text abcx|
+sel [0,1)*
+modified 0
+hist cur 1 n 2 saved 1
+text abcyx|
+sel [0,1)*
+modified 1
+hist cur 2 n 2 saved 1
+text abcx|
+sel [0,1)*
+modified 0
+hist cur 1 n 2 saved 1

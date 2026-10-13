@@ -1,0 +1,11 @@
+# s nested under v: only the lines not starting with #; one undo step
+file b.txt "int a;\n#int b;\nint c;\n"
+open b.txt
+keys ":%x/.*\\n/ v/^#/ s/int/long/g<ret>"
+dump text
+dump sel
+dump msg
+keys "u"
+dump text
+keys "u"
+dump msg

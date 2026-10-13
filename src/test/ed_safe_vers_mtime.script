@@ -1,0 +1,17 @@
+file a.c "int x;\n"
+open a.c
+keys "ix<esc>"
+extvers a.c
+keys ":w<ret>"
+dump msg
+keys ":w!<ret>"
+dump msg
+extmtime a.c 1
+keys "iy<esc>"
+keys ":w<ret>"
+dump msg
+extmtime a.c 2
+keys "iz<esc>"
+keys ":w<ret>"
+dump msg
+dump hoststamp a.c

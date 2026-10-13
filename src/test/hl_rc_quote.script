@@ -1,0 +1,5 @@
+# an rc quote runs across lines
+lang rc
+load "echo 'a\nb' $x\nexit\n"
+hl all
+check

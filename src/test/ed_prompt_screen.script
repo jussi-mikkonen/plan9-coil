@@ -1,0 +1,6 @@
+# the prompt is drawn in the status row; long text shows its tail; Ocur after the last cell
+size 3 20
+file a.c "x\n"
+open a.c
+keys ":abcdefghijklmnopqrstuvwxyz0123"
+dump screen

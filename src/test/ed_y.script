@@ -1,0 +1,11 @@
+# y acts on the text between matches, including the tail
+file a.txt "a,b,c"
+file b.txt "a,b,c\n"
+open a.txt
+keys ":%y/,/ c/X/<ret>"
+dump text
+dump sel
+open b.txt
+keys ":%y/,/ c/X/<ret>"
+dump text
+dump sel

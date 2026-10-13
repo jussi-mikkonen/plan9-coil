@@ -1,0 +1,11 @@
+load "abc\n"
+ins 3 "x"
+seal
+ins 3 "y"
+undo
+save
+dump
+redo
+dump
+undo
+dump

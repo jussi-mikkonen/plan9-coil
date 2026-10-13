@@ -1,0 +1,9 @@
+open 0
+text "aXbint x;\n"
+sel NOR [2,3)*
+text "abint x;\n"
+sel NOR [1,2)*
+text "int x;\n"
+sel NOR [0,1)*
+text "aXbint x;\n"
+sel NOR [2,3)*

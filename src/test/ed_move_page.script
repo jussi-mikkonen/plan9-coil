@@ -1,0 +1,32 @@
+size 6 20
+file p.txt "l01\nl02\nl03\nl04\nl05\nl06\nl07\nl08\nl09\nl10\nl11\nl12\nl13\nl14\nl15\nl16\nl17\nl18\nl19\nl20\nl21\nl22\nl23\nl24\nl25\nl26\nl27\nl28\nl29\nl30\n"
+open p.txt
+keys "<c-d>"
+dump sel
+keys "<c-d>"
+dump sel
+keys "<c-d>"
+dump sel
+dump screen
+keys "<c-f>"
+dump sel
+keys "<pgdn>"
+dump sel
+keys "<c-u>"
+dump sel
+keys "<c-b>"
+dump sel
+dump screen
+keys "<pgup>"
+dump sel
+keys "<c-b>"
+dump sel
+keys "99<c-f>"
+dump sel
+dump screen
+keys "<c-d>"
+dump sel
+keys "3<c-u>"
+dump sel
+keys "k"
+dump sel

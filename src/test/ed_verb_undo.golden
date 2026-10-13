@@ -1,0 +1,25 @@
+open 0
+text "bar baz\n"
+text "foo bar baz\n"
+msg ""
+msg "nothing to undo"
+open 0
+text "Xbar baz\n"
+text "foo bar baz\n"
+msg ""
+msg "nothing to undo"
+open 0
+text "foo foo bar baz\n"
+text "foo bar baz\n"
+msg ""
+msg "nothing to undo"
+open 0
+text "foo foo baz\n"
+text "foo bar baz\n"
+msg ""
+msg "nothing to undo"
+open 0
+text "xxxxbar baz\n"
+text "foo bar baz\n"
+msg ""
+msg "nothing to undo"

@@ -1,0 +1,6 @@
+open 0
+msg "yank 110000 bytes: too big for snarf, kept in coil"
+snarf ""
+puts 0 gets 1
+sel NOR [1,110001)*
+sel NOR [110001,110004)*

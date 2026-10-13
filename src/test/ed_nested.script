@@ -1,0 +1,13 @@
+# nested chains: x then g, and x lines then v then x
+file a.txt "foo bar fox\n"
+file b.txt "int a;\n#int b;\nint c;\n"
+open a.txt
+keys ":%x/[a-z]+/ g/o/ c/O/<ret>"
+dump text
+dump sel
+dump msg
+open b.txt
+keys ":%x/.*\\n/ v/^#/ x/int/ c/long/<ret>"
+dump text
+dump sel
+dump msg

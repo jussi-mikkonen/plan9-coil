@@ -1,0 +1,7 @@
+open 0
+text "foo foo\n"
+sel NOR [4,7)*
+reg 1
+r "foo"
+text "foo bar\n"
+sel NOR [4,7)*

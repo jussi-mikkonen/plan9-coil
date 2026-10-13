@@ -1,0 +1,15 @@
+file c.txt "a\r\nb\r\n"
+file l.txt "a\nb\n"
+open c.txt
+dump status
+keys "i<ret>"
+dump text
+dump status
+keys "<bs>"
+dump text
+keys "<esc>"
+dump status
+open l.txt
+dump status
+keys "i<cr>"
+dump text

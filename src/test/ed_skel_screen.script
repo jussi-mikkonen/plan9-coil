@@ -1,0 +1,9 @@
+size 6 20
+file s.c "\tint x;\nabcdefghijklmnopqrstuvwxyz\nz\n"
+open s.c
+dump screen
+size 5 5
+width eaw
+file w.c "\xe4\xb8\xadz\nabcd\xe4\xb8\xade\n"
+open w.c
+dump screen

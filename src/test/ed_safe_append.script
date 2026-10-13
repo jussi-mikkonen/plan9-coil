@@ -1,0 +1,9 @@
+file log.txt "old\n"
+fmode log.txt append
+open log.txt
+keys "ix<esc>"
+keys ":w<ret>"
+dump msg
+keys ":w!<ret>"
+dump msg
+dump host log.txt

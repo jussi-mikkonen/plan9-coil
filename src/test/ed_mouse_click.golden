@@ -1,0 +1,9 @@
+open 0
+sel NOR [4,5)*
+sel NOR [6,7)*
+sel NOR [6,7)*
+sel NOR [12,13)*
+sel INS [1,1)*
+text "aZbc def\nxy\n\nQlast line\n"
+text "abc def\nxy\n\nQlast line\n"
+sel NOR [11,12)*

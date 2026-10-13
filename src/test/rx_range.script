@@ -1,0 +1,10 @@
+# lo and hi are real bounds: ^ needs a newline before lo, $ a newline (or the end) at hi
+text "xx\nxx\n"
+find "^x" 1 6
+find "^x" 0 6
+find "x$" 0 1
+find "x$" 0 2
+find "x$" 0 4
+find "x$" 0 5
+find "x" 4 4
+find "" 3 3

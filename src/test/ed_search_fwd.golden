@@ -1,0 +1,9 @@
+open 0
+sel NOR [6,9)*
+msg ""
+sel NOR [12,15)*
+sel NOR [16,19)*
+search "foo" dir 1
+sel SEL [0,9)*
+mode SEL
+sel SEL [0,15)*

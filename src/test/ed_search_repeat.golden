@@ -1,0 +1,10 @@
+open 0
+msg "no previous pattern"
+search none
+sel NOR [8,11)*
+sel NOR [16,19)*
+search "foo" dir 1
+prompt / ""
+prompt / "foo"
+mode NOR
+sel NOR [0,3)*

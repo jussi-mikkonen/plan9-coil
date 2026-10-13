@@ -1,0 +1,15 @@
+file a.c "\tif(x){\n"
+open a.c
+keys "A<ret>"
+dump text
+dump sel
+file b.c "    foo\n"
+open b.c
+keys "o"
+dump text
+dump sel
+file c.c "\t\tx\n"
+open c.c
+keys "a<ret>"
+dump text
+dump sel

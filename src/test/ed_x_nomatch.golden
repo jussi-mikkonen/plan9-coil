@@ -1,0 +1,10 @@
+open 0
+msg "no match"
+sel NOR [0,1)*
+text "abc\n"
+msg "nothing to undo"
+msg "no match"
+msg "no match"
+msg "unknown command 'p'"
+msg "missing pattern for g"
+text "abc\n"

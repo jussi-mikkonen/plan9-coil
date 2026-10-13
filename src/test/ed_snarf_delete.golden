@@ -1,0 +1,7 @@
+open 0
+snarf "foo "
+puts 1 gets 1
+text "bar\n"
+snarf "bar"
+puts 2 gets 2
+text "\n"

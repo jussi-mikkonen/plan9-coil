@@ -1,0 +1,3 @@
+open -1 d: is a directory
+open 0
+msg "a.c: is a directory"

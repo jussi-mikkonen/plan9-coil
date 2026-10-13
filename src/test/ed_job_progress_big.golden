@@ -1,0 +1,8 @@
+open 0
+job searching 7199999/25000003
+msg "searching 28% (Esc interrupts)"
+job searching 21600001/25000003
+msg "searching 86% (Esc interrupts)"
+job none
+msg ""
+sel NOR [25000000,25000003)*

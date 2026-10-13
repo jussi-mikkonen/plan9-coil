@@ -1,0 +1,14 @@
+# mkfile line lexer: decided per line by its first byte
+lang mkfile
+lex "</$objtype/mkfile"
+lex "TARG=coil"
+lex "OFILES=main.$O ${X}"
+lex "# comment"
+lex "%.$O: $HFILES"
+lex "install:V: /sys/man/1/coil"
+lex "\tcp $prereq $target # copy"
+lex "\techo 'a b'"
+lex "X = a # c"
+lex "all:V: a b"
+lex ""
+lex "   "

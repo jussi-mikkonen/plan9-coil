@@ -1,0 +1,36 @@
+file c.txt "aa bb cc dd ee ff\nl2\nl3\n"
+open c.txt
+keys "3w"
+dump sel
+keys "2w"
+dump sel
+keys "2b"
+dump sel
+keys "2e"
+dump sel
+keys "10j"
+dump sel
+keys "10k"
+dump sel
+keys "2x"
+dump sel
+file d.txt "0123456789abcdef\n"
+open d.txt
+keys "10l"
+dump sel
+keys "0l"
+dump sel
+keys "3l"
+dump sel
+keys "l"
+dump sel
+keys "99999999999l"
+dump sel
+keys "gg"
+dump sel
+keys "3l"
+dump sel
+keys "2h"
+dump sel
+keys "0"
+dump sel

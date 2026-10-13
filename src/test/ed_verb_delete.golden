@@ -1,0 +1,20 @@
+open 0
+text "bar baz\n"
+sel NOR [0,1)*
+reg 1
+r "foo "
+open 0
+text "ab\nef\n"
+sel NOR [3,4)*
+reg 1
+r "cd\n"
+open 0
+text "a"
+sel NOR [1,1)*
+reg 1
+r "b"
+open 0
+text ""
+sel NOR [0,0)*
+reg 1
+r "b"

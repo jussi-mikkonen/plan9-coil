@@ -1,0 +1,11 @@
+# "\r" before "\n" is hidden; a lone "\r" shows as ^M
+size 3 6
+load "a\r\nb\rc\n"
+row 0
+row 1
+colof 1
+colof 2
+colof 4
+colof 5
+cell2pos 0 5
+pos2cell 2

@@ -1,0 +1,4 @@
+# control characters show as two cells ^X in the ctrl style
+size 2 12
+load "\0\x01\x1b\x7f\nx\n"
+row 0

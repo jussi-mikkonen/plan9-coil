@@ -1,0 +1,11 @@
+file a.txt "w1 w2 w3\nx y z\n"
+open a.txt
+setsel 0 2 3 5 6 8
+keys "y"
+dump snarf
+setsel 9 10 11 12 13 14
+keys "p"
+dump text
+dump sel
+dump reg
+dump snarf

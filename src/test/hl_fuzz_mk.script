@@ -1,0 +1,5 @@
+# differential fuzz
+lang mkfile
+fuzz 1 500
+fuzz 2 500
+fuzz 3 2000

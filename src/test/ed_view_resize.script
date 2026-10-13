@@ -1,0 +1,10 @@
+# resize keeps the cursor visible and re-lays out
+size 8 30
+file r.c "line0\nline1\nline2\nline3\nline4\nline5\nline6\nline7\n"
+open r.c
+keys "5j"
+resize 4 10
+dump screen
+dump sel
+resize 10 40
+dump screen

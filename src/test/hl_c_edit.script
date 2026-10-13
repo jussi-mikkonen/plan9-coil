@@ -1,0 +1,18 @@
+# typing /* recolours the following lines, */ ends it, undo restores
+lang c
+load "int a;\nint b;\nint c;\nint d;\nint e;\nint f;\n"
+hl all
+edit 7 0 "/*"
+hl all
+check
+seal
+edit 23 0 "*/"
+hl all
+check
+undo
+check
+undo
+hl all
+check
+redo
+check

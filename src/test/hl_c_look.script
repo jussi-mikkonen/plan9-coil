@@ -1,0 +1,18 @@
+# bounded work: look-back plus visible lines from the nearest checkpoint
+lang c
+genlines 3000 "int x; /* y */"
+look 2000
+state 2500
+lexed
+state 2540
+lexed
+state 2540
+lexed
+# a cold jump more than the look-back past the nearest checkpoint assumes normal state
+look 4
+genlines 300 "a" "/*\n"
+state 200
+lexed
+look 2000
+genlines 300 "a" "/*\n"
+state 200

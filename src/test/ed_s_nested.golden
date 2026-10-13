@@ -1,0 +1,8 @@
+open 0
+text "f0o bar f0x\n"
+sel NOR [1,2) [9,10)*
+msg "2 changes"
+open 0
+text "X far\nX\n"
+sel NOR [0,1) [6,7)*
+msg "2 changes"

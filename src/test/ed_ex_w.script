@@ -1,0 +1,20 @@
+file a.c "int x;\n"
+open a.c
+keys "ix<esc>"
+keys ":w<ret>"
+dump host a.c
+dump status
+dump msg
+keys "iy<esc>"
+keys ":w b.c<ret>"
+dump host b.c
+dump status
+dump msg
+keys "iz<esc>"
+keys ":w b.c<ret>"
+dump host b.c
+dump msg
+keys ":w! b.c<ret>"
+dump host b.c
+dump msg
+dump status

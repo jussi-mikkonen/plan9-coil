@@ -1,0 +1,26 @@
+open 0
+sel NOR [0,5)*
+sel NOR [5,8)*
+sel NOR [8,9)*
+sel NOR [9,12)*
+sel NOR [12,14)*
+sel NOR [14,17)*
+sel NOR [17,19)*
+sel NOR [19,22)*
+sel NOR [22,23)*
+sel NOR [23,24)*
+sel NOR [24,25)*
+sel NOR [24,25)*
+sel NOR [24,23)*
+sel NOR [23,22)*
+sel NOR [22,17)*
+sel NOR [17,14)*
+sel NOR [14,12)*
+sel NOR [12,9)*
+open 0
+sel NOR [0,3)*
+sel NOR [3,8)*
+sel NOR [8,9)*
+sel NOR [9,12)*
+sel NOR [12,13)*
+sel NOR [13,17)*

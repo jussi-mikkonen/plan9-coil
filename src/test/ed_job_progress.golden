@@ -1,0 +1,8 @@
+open 0
+job searching 2039/20003
+msg "searching 10% (Esc interrupts)"
+job searching 8162/20003
+msg "searching 40% (Esc interrupts)"
+job none
+msg ""
+sel NOR [20000,20003)*

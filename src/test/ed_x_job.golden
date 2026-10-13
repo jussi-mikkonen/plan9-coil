@@ -1,0 +1,8 @@
+open 0
+job running 1024/20000
+job none
+msg "interrupted"
+sel NOR [0,1)*
+msg "nothing to undo"
+job none
+msg "2000 changes"

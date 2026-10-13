@@ -1,0 +1,8 @@
+open 0
+job running 19/423
+job none
+msg ""
+status NOR f.txt 1:4
+job none
+msg ""
+status NOR f.txt 1:4

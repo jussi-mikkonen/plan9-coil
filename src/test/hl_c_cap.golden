@@ -1,0 +1,13 @@
+lang c tab 4 tabs
+l 00 int a; int b; int c; int d; int e; int f;
+s 00 ttt....ttt...............................
+l 01 /* aaaaaaaaaaaaaaaaaaaaaaa
+s 01 cccccccccccccccc..........
+l 02 int x;
+s 02 cccccc
+l 00 int a; int b; int c; int d; int e; int f;
+s 00 ttt....ttt....ttt....ttt....ttt....ttt...
+l 01 /* aaaaaaaaaaaaaaaaaaaaaaa
+s 01 cccccccccccccccccccccccccc
+l 02 int x;
+s 02 cccccc

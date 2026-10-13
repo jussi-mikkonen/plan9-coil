@@ -1,0 +1,16 @@
+file q.c "x\n"
+open q.c
+keys "<c-q>"
+dump quit
+open q.c
+dump quit
+keys "ix<esc>"
+keys "<c-q>"
+dump quit
+dump msg
+keys "l"
+dump msg
+keys "<c-q>"
+dump quit
+keys "<c-q>"
+dump quit

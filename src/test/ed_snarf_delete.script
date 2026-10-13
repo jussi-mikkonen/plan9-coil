@@ -1,0 +1,9 @@
+file a.txt "foo bar\n"
+open a.txt
+keys "wd"
+dump snarf
+dump text
+setsel 0 3
+keys "c<esc>"
+dump snarf
+dump text

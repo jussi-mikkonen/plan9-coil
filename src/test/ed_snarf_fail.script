@@ -1,0 +1,9 @@
+snarf cap 4
+file a.txt "abcdefg\n"
+open a.txt
+setsel 0 7
+keys "y"
+dump msg
+dump snarf
+keys "p"
+dump text

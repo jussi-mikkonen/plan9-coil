@@ -1,0 +1,16 @@
+lang c tab 4 tabs
+l 00 int a;
+s 00 ttt...
+l 01 x = 1; /* start
+s 01 ....n..cccccccc
+l 02 middle
+s 02 cccccc
+l 03 end */ y = 2;
+s 03 cccccc.....n.
+l 04 char *s = "/* not";
+s 04 tttt......ssssssss.
+l 05 z = 3; // not /* either
+s 05 ....n..cccccccccccccccc
+l 06 w = 4;
+s 06 ....n.
+check ok

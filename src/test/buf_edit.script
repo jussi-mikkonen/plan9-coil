@@ -1,0 +1,28 @@
+load "hello\nworld\n"
+ins 5 ", there"
+text
+ins 0 ">> "
+del 3 2
+text
+len
+lines
+linestart 1
+line 14
+pieces
+ins 20 "a"
+ins 21 "b"
+ins 22 "c"
+ins 23 "\n"
+text
+len
+lines
+pieces
+del 2 10
+text
+len
+lines
+linestart 1
+linestart 2
+line 12
+pieces
+check

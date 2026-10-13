@@ -1,0 +1,6 @@
+open 0
+msg "new.c changed on disk; :w! overwrites"
+host new.c "x\n"
+open 0
+msg "wrote a.c 8"
+host a.c "xint x;\n"

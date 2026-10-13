@@ -1,0 +1,35 @@
+lang markdown tab 4 spaces
+l 00 text
+s 00 ....
+l 01 ```c
+s 01 CCCC
+l 02 int x; /* no */
+s 02 CCCCCCCCCCCCCCC
+l 03 ```
+s 03 CCC
+l 04 after *e*
+s 04 ......eee
+l 05 ~~~
+s 05 CCC
+l 06 ```
+s 06 CCC
+l 07 still
+s 07 CCCCC
+l 08 ~~~
+s 08 CCC
+check ok
+state 3 600301
+state 6 7e0301
+l 00 ````
+s 00 CCCC
+l 01 x
+s 01 C
+l 02 ```
+s 02 CCC
+l 03 y
+s 03 C
+l 04 ````
+s 04 CCCC
+l 05 z *e*
+s 05 ..eee
+check ok

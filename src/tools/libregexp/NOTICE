@@ -1,0 +1,32 @@
+libregexp (vendored, Linux test build only)
+===========================================
+
+Origin:   9front /sys/src/libregexp, copied from the author's 9front VM with
+          dircp into src/tools/libregexp (user-supplied; copy made 2026-07-25
+          per the preserved timestamps, taken into this repository 2026-10-11).
+          The 9front commit was not recorded.
+Licence:  MIT (the 9front/Plan 9 libregexp licence).
+Use:      ONLY by the Linux test build (src/Makefile builds test/librx.a from
+          these sources so the goldens run the same engine as the VM).
+          9front builds link the system libregexp; the shipped coil binary
+          never contains this copy.
+Status:   the .c and .h files are unmodified copies. Linux needs the shims in
+          src/tools/rx9 (u.h, libc.h, regexp.h, rx9.c).
+
+Files (Linux-side listing of the dircp copy: sizes in bytes, the original
+2026-07-25 timestamps preserved; the VM "ls -l" output was not available):
+
+  218   2026-07-25 09:00  mkfile
+  9764  2026-07-25 09:00  regcomp.c
+  210   2026-07-25 09:00  regerror.c
+  3372  2026-07-25 09:00  regexec.c
+  1359  2026-07-25 09:00  regimpl.h
+  1155  2026-07-25 09:00  regprint.c
+  1045  2026-07-25 09:00  regsub.c
+  3330  2026-07-25 09:00  rregexec.c
+  1084  2026-07-25 09:00  rregsub.c
+  test/  basic.rc (10231), mkfile (133), regexec.c (733), rregexec.c (921)
+
+Not compiled: regerror.c (its regerror writes to stderr and exits the process;
+coil defines its own regerror in src/rx.c so a bad pattern never kills the
+editor) and regprint.c (needs the Plan 9 Fmt machinery; no use).

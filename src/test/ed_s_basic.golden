@@ -1,0 +1,9 @@
+open 0
+text "bar foo\n"
+sel NOR [0,3)*
+msg "1 change"
+text "foo foo\n"
+sel NOR [0,7)*
+msg "nothing to undo"
+text "foo foo\n"
+msg "no match"

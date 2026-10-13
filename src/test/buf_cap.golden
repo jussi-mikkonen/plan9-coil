@@ -1,0 +1,5 @@
+error file too large
+error buffer full
+len 10
+text "abcdefghij"
+check ok

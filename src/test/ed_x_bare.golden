@@ -1,0 +1,4 @@
+open 0
+sel NOR [2,4)* [7,10) [13,14)
+mode NOR
+msg ""

@@ -1,0 +1,10 @@
+open 0
+sel NOR [3,4)*
+job searching 6115/20003
+job none
+msg "interrupted"
+sel NOR [3,4)*
+job none
+msg "interrupted"
+sel NOR [3,4)*
+mode NOR

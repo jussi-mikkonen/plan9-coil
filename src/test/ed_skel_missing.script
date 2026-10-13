@@ -1,0 +1,9 @@
+open new.c
+dump text
+dump status
+dump msg
+keys "ia<esc>"
+dump status
+keys "<c-s>"
+dump host new.c
+dump status

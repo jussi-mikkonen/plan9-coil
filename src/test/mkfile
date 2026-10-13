@@ -1,0 +1,76 @@
+</$objtype/mkfile
+
+# Golden tests, run by mkone's test rule (cd test && mk test).
+# Pure sources live in ..; the Linux harness (make) runs the same goldens.
+CFLAGS=$CFLAGS -DPLAN9 -I..
+HFILES=../compat.h ../coil.h ../host.h script.h
+PUREO=utf.$O buf.$O doc.$O sel.$O lang.$O view.$O render.$O keymap.$O ed.$O motion.$O obj.$O verbs.$O prompt.$O excmd.$O file.$O snarf.$O rx.$O search.$O job.$O cmd.$O exec.$O lex.$O hl.$O
+
+all:V: $O.buftest $O.seltest $O.doctest $O.viewtest $O.edtest $O.rxtest $O.cmdtest $O.hltest
+
+$O.buftest: buftest.$O $PUREO
+	$LD -o $target $prereq
+
+$O.seltest: seltest.$O $PUREO
+	$LD -o $target $prereq
+
+$O.doctest: doctest.$O $PUREO
+	$LD -o $target $prereq
+
+$O.viewtest: viewtest.$O $PUREO
+	$LD -o $target $prereq
+
+$O.edtest: edtest.$O $PUREO
+	$LD -o $target $prereq
+
+$O.rxtest: rxtest.$O $PUREO
+	$LD -o $target $prereq
+
+$O.cmdtest: cmdtest.$O $PUREO
+	$LD -o $target $prereq
+
+$O.hltest: hltest.$O $PUREO
+	$LD -o $target $prereq
+
+%.$O: $HFILES
+
+%.$O: ../%.c
+	$CC $CFLAGS -o $target ../$stem.c
+
+%.$O: %.c
+	$CC $CFLAGS -o $target $stem.c
+
+test:V: all
+	fail=0
+	fn t {
+		for(s in $2^_*.script){
+			n=`{basename $s .script}
+			./$O.$1 <$s >$n.out >[2=1]
+			if(cmp -s $n.golden $n.out){
+				echo PASS $n
+				rm -f $n.out
+			}
+			if not {
+				echo FAIL $n '(output kept in test/'$n'.out)'
+				fail=1
+			}
+		}
+	}
+	t buftest buf
+	t seltest sel
+	t doctest doc
+	t viewtest view
+	t edtest ed
+	t rxtest rx
+	t cmdtest cmd
+	t hltest hl
+	if(grep -s '#include[	 ]*<' ../utf.c ../buf.c ../doc.c ../sel.c ../lang.c ../view.c ../render.c ../keymap.c ../ed.c ../motion.c ../obj.c ../verbs.c ../prompt.c ../excmd.c ../file.c ../snarf.c ../rx.c ../search.c ../job.c ../cmd.c ../exec.c ../lex.c ../hl.c ../coil.h ../host.h){
+		echo FAIL purity
+		fail=1
+	}
+	if(~ $fail 1)
+		exit fail
+	exit ''
+
+clean:V:
+	rm -f *.[05678qv] [05678qv].buftest [05678qv].seltest [05678qv].doctest [05678qv].viewtest [05678qv].edtest [05678qv].rxtest [05678qv].cmdtest [05678qv].hltest
